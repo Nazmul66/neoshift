@@ -26,4 +26,3 @@ menu_listing.forEach((element, i) => {
           }, 300); // match the CSS transition duration
       });
 });
-

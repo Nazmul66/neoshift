@@ -24,6 +24,90 @@ ul li{
 
 
 /*******************************
+        Category Section
+*********************************/
+.category_section{
+
+}
+.category_details{
+    
+}
+.category_details .category_img{
+
+}
+.category_details .category_img img{
+    width: 100%;
+    border-radius: 50%;
+    border: 10px solid rgba(2, 108, 255, 0.2);
+    box-shadow: 5px 25px 49.4px rgba(2, 108, 255, 0.15);
+}
+.category_details h3{
+    color: #333;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* #categorySlider button.owl-prev{
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    transform: translateY(-50%);
+    --webkit-transform: translateY(-50%);
+    background: var(--theme-green);
+    color: var(--theme-white);
+    border: 2px solid var(--theme-green);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    display : --webkit-box;
+    display: flex;
+    --webkit-box-pack : center;
+    --ms-flex-pack: center;
+    justify-content: center;
+    --webkit-box-align : center;
+    --ms-flex-align: center;
+    align-items: center;
+    border-radius: 50px;
+    --webkit-border-radius: 50px;
+    transition: all 0.3s ease;
+    --webkit-transition: all 0.3s ease;
+}
+#categorySlider button.owl-next{
+    position: absolute;
+    top: 50%;
+    right: -4px;
+    transform: translateY(-50%);
+    --webkit-transform: translateY(-50%);
+    background: var(--theme-green);
+    color: var(--theme-white);
+    border: 2px solid var(--theme-green);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    display : --webkit-box;
+    display: flex;
+    --webkit-box-pack : center;
+    --ms-flex-pack: center;
+    justify-content: center;
+    --webkit-box-align : center;
+    --ms-flex-align: center;
+    align-items: center;
+    border-radius: 50px;
+    --webkit-border-radius: 50px;
+    transition: all 0.3s ease;
+    --webkit-transition: all 0.3s ease;
+}
+#categorySlider button.owl-next:hover,
+#categorySlider button.owl-prev:hover{
+    background: var(--theme-white);
+    color: var(--theme-green);
+    border: 2px solid var(--theme-green);
+} */
+
+/*******************************
         Service Section
 *******************************/
 .service_section{
