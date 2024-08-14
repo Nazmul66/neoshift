@@ -28,6 +28,24 @@ menu_listing.forEach((element, i) => {
 
 
 
+    let video_btn = document.querySelector('.video_btn');
+    let popup_video = document.querySelector('.popup_video');
+    let video_close = document.querySelector('.video_close');
+    let iframe = popup_video.querySelector('iframe');
+    let videoSrc = iframe.src;
+
+    video_btn.addEventListener('click', () => {
+        iframe.src = videoSrc + "&autoplay=1"; // Adding autoplay parameter
+        popup_video.classList.add('show_video');
+    });
+
+    video_close.addEventListener('click', () => {
+        popup_video.classList.remove('show_video');
+        iframe.src = videoSrc; // Resetting the src to stop the video
+    });
+
+
+
 $(document).ready(function(){
     $('#categorySlider').owlCarousel({
         loop: true,
