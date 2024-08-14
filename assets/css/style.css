@@ -449,9 +449,6 @@ ul li{
     padding: 10rem 0;
     background-image: url('../images/video-player.png');
 }
-.video-setup{
-    
-}
 .video-setup h1{
     font-family: "Moderustic", sans-serif;
     width: 60%;
@@ -560,6 +557,38 @@ ul li{
     cursor: pointer;
 }
 
+/*******************************
+        Counter Section
+*********************************/
+.counter_section{
+    margin-top: -4rem;
+}
+.counter_contents{
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    background-color: #026CFF;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.counter_contents .counter_title{
+
+}
+.counter_contents .counter_title h1{
+    font-family: "Moderustic", sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #FFF;
+    line-height: 60px;
+    text-align: center;
+}
+.counter_contents .counter_title p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFF;
+    line-height: 30px;
+    text-align: center;
+}
 
 /*******************************
         Testimonial Section
