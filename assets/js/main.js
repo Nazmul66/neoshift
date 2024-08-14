@@ -1,4 +1,3 @@
-
 // Portfolio Section  
 let menu_listing = document.querySelectorAll('ul .menu_listing');
 let portfolio_container = document.querySelectorAll('.portfolio_container');
@@ -26,3 +25,99 @@ menu_listing.forEach((element, i) => {
           }, 300); // match the CSS transition duration
       });
 });
+
+
+
+$(document).ready(function(){
+    $('#categorySlider').owlCarousel({
+        loop: true,
+        margin: 50,
+        nav: false,  
+        dots: false,  
+        autoplay: true, 
+        autoplayTimeout: 3000, 
+        autoplayHoverPause: true, 
+        responsive: {
+            0: {
+                items: 3 
+            },
+            769: {
+                items: 4
+            },
+            1000: {
+                items: 6
+            }
+        }
+    });
+
+
+    $('#testimonialSlider').owlCarousel({
+        loop: true,
+        margin: 50,
+        nav: false,  
+        dots: false,  
+        autoplay: true, 
+        autoplayTimeout: 3000, 
+        autoplayHoverPause: true, 
+        responsive: {
+            0: {
+                items: 1
+            },
+            769: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+
+
+    $('#teamSlider').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: false,  
+        dots: false,  
+        navText: ["<i class='bx bx-chevron-left' ></i>" , "<i class='bx bx-chevron-right'></i>"],
+        autoplay: true, 
+        autoplayTimeout: 3000, 
+        autoplayHoverPause: true, 
+        responsive: {
+            0: {
+                items: 2 
+            },
+            769: {
+                items: 2
+            },
+            1000: {
+                nav: true,
+                items: 4
+            }
+        }
+    });
+
+
+    $('#blogSlider').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: false,  
+        dots: false,  
+        navText: ["<i class='bx bx-chevron-left' ></i>" , "<i class='bx bx-chevron-right'></i>"],
+        autoplay: true, 
+        autoplayTimeout: 3000, 
+        autoplayHoverPause: true, 
+        responsive: {
+            0: {
+                items: 2 
+            },
+            769: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+
+});
+

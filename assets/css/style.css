@@ -27,7 +27,28 @@ ul li{
         Category Section
 *********************************/
 .category_section{
-
+   padding: 6rem 0 4rem;
+}
+.category_title{
+    text-align: center;
+    margin-bottom: 80px;
+}
+.category_title h2{
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+}
+.category_title h5{
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #407BFF;
+    border-radius: 50px;
+    box-shadow: 0px 9px 19.2px rgba(0, 0, 0, 0.1);
+    padding: 12px 30px;
+    margin-bottom: 20px;
 }
 .category_details{
     
@@ -47,10 +68,10 @@ ul li{
     font-weight: 700;
     line-height: 30px;
     text-align: center;
-    margin-top: 16px;
+    margin-top: 32px;
 }
 
-/* #categorySlider button.owl-prev{
+#categorySlider button.owl-prev{
     position: absolute;
     top: 50%;
     left: -4px;
@@ -105,7 +126,7 @@ ul li{
     background: var(--theme-white);
     color: var(--theme-green);
     border: 2px solid var(--theme-green);
-} */
+}
 
 /*******************************
         Service Section
@@ -418,4 +439,334 @@ ul li{
     line-height: 20px;
     color: #333;
     padding: 0 20px;
+}
+
+
+/*******************************
+        Testimonial Section
+*********************************/
+.testimonial_section{
+    padding: 6rem 0 4rem;
+ }
+ .testimonial_title{
+     text-align: center;
+     margin-bottom: 80px;
+ }
+ .testimonial_title h2{
+     width: fit-content;
+     margin: 0 auto;
+     font-size: 48px;
+     font-weight: 700;
+     line-height: 60px;
+ }
+ .testimonial_title h5{
+     width: fit-content;
+     margin: 0 auto;
+     font-size: 18px;
+     color: #407BFF;
+     border-radius: 50px;
+     box-shadow: 0px 9px 19.2px rgba(0, 0, 0, 0.1);
+     padding: 12px 30px;
+     margin-bottom: 20px;
+ }
+
+ .testimonial_content{
+
+ }
+ .testimonial_description{
+    padding: 20px 30px 40px 22px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+ }
+ .testimonial_description p{
+    color: #666;
+    line-height: 30px;
+    margin-bottom: 16px;
+ }
+ .testimonial_description .testimonial_ratings{
+
+ }
+ .testimonial_description .testimonial_ratings i{
+    font-size: 18px;
+    color: #FC7A03;
+ }
+ .testimonial_user_content{
+    display: flex;
+    align-items: center;
+ }
+ .testimonial_user_content img{
+    width: 70px !important;
+    height: 70px;
+ } 
+ .testimonial_user_content .testimonial_user_title{
+    margin-left: 20px;
+ }
+ .testimonial_user_content .testimonial_user_title h3{
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+ }
+ .testimonial_user_content .testimonial_user_title p{
+    font-size: 14px;
+    color: #666;
+    line-height: 30px;
+    text-transform: uppercase;
+ }
+
+
+ /*******************************
+           Team Section
+*********************************/
+.team_section{
+    padding: 6rem 0 4rem;
+    background-color: #F7FBFF;
+ }
+ .team_title{
+     text-align: center;
+     margin-bottom: 80px;
+ }
+ .team_title h2{
+     width: fit-content;
+     margin: 0 auto;
+     font-size: 48px;
+     font-weight: 700;
+     line-height: 60px;
+ }
+ .team_title h5{
+     width: fit-content;
+     margin: 0 auto;
+     font-size: 18px;
+     color: #407BFF;
+     background-color: #FFF;
+     border-radius: 50px;
+     box-shadow: 0px 9px 19.2px rgba(0, 0, 0, 0.1);
+     padding: 12px 30px;
+     margin-bottom: 20px;
+ }
+
+ .team_details{
+    background: #FFF;
+    box-shadow: 0px 9px 19.2px rgba(0,0,0,0.04);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+ }
+ .team_details img{
+    width: 100%;
+    height: 320px;
+    margin-bottom: 20px;
+ }
+ .team_content{
+    padding: 0 24px 20px;
+ }
+ .team_content h2{
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    line-height: 42px;
+ }
+ .team_content h5{
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #026CFF;
+ }
+ .team_content p{
+    color: #666;
+    line-height: 30px;
+    margin-bottom: 16px;
+ }
+ .team_content .team_social li{
+    display: inline-block;
+ }
+ .team_content .team_social li a i{
+    width: 35px;
+    height: 35px;
+    color: #333333;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-right: 10px;
+    transition: all 0.3s ease-in-out;
+ }
+ .team_content .team_social li a i:hover{
+    border: 1px solid #026CFF;
+ }
+
+
+ #teamSlider button.owl-prev{
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    --webkit-transform: translateY(-50%);
+    background: #026CFF;
+    color: #FFF;
+    border: 2px solid #026CFF;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    display : --webkit-box;
+    display: flex;
+    --webkit-box-pack : center;
+    --ms-flex-pack: center;
+    justify-content: center;
+    --webkit-box-align : center;
+    --ms-flex-align: center;
+    align-items: center;
+    border-radius: 50px;
+    --webkit-border-radius: 50px;
+    transition: all 0.3s ease;
+    --webkit-transition: all 0.3s ease;
+}
+#teamSlider button.owl-next{
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translateY(-50%);
+    --webkit-transform: translateY(-50%);
+    background: #026CFF;
+    color: #FFF;
+    border: 2px solid #026CFF;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    display : --webkit-box;
+    justify-content: center;
+    --webkit-box-align : center;
+    --ms-flex-align: center;
+    align-items: center;
+    border-radius: 50px;
+    --webkit-border-radius: 50px;
+    transition: all 0.3s ease;
+    --webkit-transition: all 0.3s ease;
+}
+#teamSlider button.owl-next i,
+#teamSlider button.owl-prev i{
+   font-size: 32px;
+}
+#teamSlider button.owl-next:hover,
+#teamSlider button.owl-prev:hover{
+    opacity: 0.8;
+}
+
+
+ /*******************************
+           Blog Section
+*********************************/
+.blog_section{
+   padding: 6rem 0;
+} 
+.blog_title{
+    text-align: center;
+    margin-bottom: 80px;
+}
+.blog_title h2{
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+}
+.blog_title h5{
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #407BFF;
+    background-color: #FFF;
+    border-radius: 50px;
+    box-shadow: 0px 9px 19.2px rgba(0, 0, 0, 0.1);
+    padding: 12px 30px;
+    margin-bottom: 20px;
+}
+
+.blog_details{
+    background-color: #FFF;
+    box-shadow: 0px 4px 15px rgba(3, 128, 150, 0.1);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.blog_details .blog_img{
+   position: relative;
+}
+.blog_details .blog_img img{
+    width: 100% !important;
+    height: 260px;
+}
+.blog_details .blog_img .view_stack{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 14px;
+    left: 14px;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 10px;
+}
+.blog_details .blog_img .view_stack .view_stack_content{
+    margin: 0 8px;
+}
+.blog_details .blog_img .view_stack .view_stack_content i{
+    font-size: 14px;
+    color: #407BFF;
+}
+.blog_details .blog_img .view_stack .view_stack_content span{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #666;
+}
+.blog_content{
+    padding: 30px 30px 20px; 
+}
+.blog_content h2{
+    font-family: "Moderustic", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-transform: capitalize;
+    line-height: 35px;
+    margin-bottom: 16px;
+}
+.blog_content p{
+    font-family: "Moderustic", sans-serif;
+    color: #666666;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+.blog_content .hr{
+   width: 100%;
+   background-color: #407cff9c;
+   height: 1px;
+}
+.blog_content .blog_user_content{
+    display: flex;
+    align-items: center;
+    margin-top: 28px;
+}
+.blog_content .blog_user_content img{
+    width: 50px;
+    height: 50px;
+}
+.blog_user_content .blog_user_title{
+    margin-left: 20px;
+}
+.blog_user_content .blog_user_title h2{
+    font-family: "Moderustic", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    text-transform: capitalize;
+    line-height: 35px;
+    margin-bottom: 0;
+}
+.blog_user_content .blog_user_title p{
+    font-family: "Moderustic", sans-serif;
+    color: #666666;
+    line-height: 22px;
+    margin-bottom: 0;
 }
