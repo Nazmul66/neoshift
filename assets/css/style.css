@@ -24,6 +24,83 @@ ul li{
 
 
 /*******************************
+        Banner Section
+*********************************/
+.banner_section{
+   padding: 2rem 0;
+   background: linear-gradient(180deg, rgba(2,108,240,0.16850490196078427) 0%, rgba(2,108,255,0) 100%);
+}
+.banner_content{
+    
+}
+.banner_content h5{
+    width: fit-content;
+    font-size: 18px;
+    color: #407BFF;
+    background-color: #FFF;
+    border-radius: 50px;
+    box-shadow: 0px 9px 19.2px rgba(0, 0, 0, 0.1);
+    padding: 12px 30px;
+    margin-bottom: 20px;
+}
+.banner_content h1{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 61px;
+    color: #000;
+    margin-bottom: 12px;
+}
+.banner_content p{
+    font-size: 16px;
+    color: #666;
+    line-height: 30px;
+    margin-bottom: 28px;
+}
+.banner_content h1 span{
+    color: #026CFF;
+}
+.banner_action{
+    display: flex;
+    align-items: center;
+}
+.banner_action a{
+    background: #026CFF;
+    color: #FFF;
+    padding: 14px 34px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+.banner_action .banner_watch_video{
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+.banner_action .banner_watch_video i {
+    width: 45px;
+    height: 45px;
+    color: #026CFF;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 1px solid #026CFF;
+}
+.banner_action .banner_watch_video span{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: #333;
+    margin-left: 12px;
+}
+.banner_img{
+    
+}
+.banner_img img{
+   width: 100%;
+}
+
+/*******************************
         Category Section
 *********************************/
 .category_section{
