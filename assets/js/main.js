@@ -27,7 +27,22 @@ menu_listing.forEach((element, i) => {
 });
 
 
+    // Video Section Javascript
+    let hamburger_menu    = document.querySelector('.hamburger_menu');
+    let close_nav         = document.querySelector('.close_nav');
+    let nav_menu          = document.querySelector('.nav_menu');
 
+
+    hamburger_menu.addEventListener('click', () => {
+        nav_menu.classList.add('active_nav');
+    });
+
+    close_nav.addEventListener('click', () => {
+        nav_menu.classList.remove('active_nav');
+    });
+
+
+    // Video Section Javascript
     let video_btn = document.querySelector('.video_btn');
     let popup_video = document.querySelector('.popup_video');
     let video_close = document.querySelector('.video_close');
@@ -45,6 +60,24 @@ menu_listing.forEach((element, i) => {
     });
 
 
+    // Banner Section Javascript
+    let banner_watch_video     = document.querySelector('.banner_watch_video');
+    let banner_popup_video     = document.querySelector('.banner_popup_video');
+    let banner_video_close     = document.querySelector('.banner_video_close');
+    let bannerIframe           = banner_popup_video.querySelector('iframe');
+    let bannerVideoSrc         = bannerIframe.src;
+
+    banner_watch_video.addEventListener('click', () => {
+        bannerIframe.src = bannerVideoSrc + "&autoplay=1"; // Adding autoplay parameter
+        banner_popup_video.classList.add('banner_show');
+    });
+
+    banner_video_close.addEventListener('click', () => {
+        banner_popup_video.classList.remove('banner_show');
+        bannerIframe.src = bannerVideoSrc; // Resetting the src to stop the video
+    });
+
+
 
 $(document).ready(function(){
     $('#categorySlider').owlCarousel({
@@ -57,13 +90,19 @@ $(document).ready(function(){
         autoplayHoverPause: true, 
         responsive: {
             0: {
-                items: 3 
+                margin: 20,
+                items: 2 
+            },
+            577: {
+                margin: 20,
+                items: 2
             },
             769: {
-                items: 4
+                margin: 20,
+                items: 3
             },
             1000: {
-                items: 6
+                items: 5
             }
         }
     });
@@ -102,15 +141,19 @@ $(document).ready(function(){
         autoplayHoverPause: true, 
         responsive: {
             0: {
-                items: 2 
+                margin: 30,
+                items: 1
+            },
+            577: {
+                margin: 10,
+                items: 2
             },
             769: {
                 items: 2
             },
-            1000: {
-                nav: true,
-                items: 4
-            }
+            993: {
+                items: 3
+            },
         }
     });
 
@@ -126,12 +169,12 @@ $(document).ready(function(){
         autoplayHoverPause: true, 
         responsive: {
             0: {
-                items: 2 
+                items: 1
             },
             769: {
                 items: 2
             },
-            1000: {
+            993: {
                 items: 3
             }
         }
