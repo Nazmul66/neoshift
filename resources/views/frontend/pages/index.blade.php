@@ -1,82 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+@extends('frontend.layout.master')
 
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Moderustic:wght@300..800&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+@push('meta-title')
 
-    <!-- All Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"> 
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+@endpush
 
-    <!-- Owl Carousel CSS File -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+@push('add-css')
 
-    <!-- Bootstrap CDN CSS Link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+@endpush
 
-    <!-- Style Css Linkup -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
 
-    <!-- Header section start -->
-      <header>
-        <div class="main_container">
-            <nav>
-                <div class="header_img">
-                    <img src="./assets/images/header-logo.png" alt="">
-                </div>
-
-                <div class="nav_menu">
-                    <div class="responsive_header_img">
-                        <img src="./assets/images/header-logo.png" alt="">
-                    </div>
-
-                   <ul class="nav_list">
-                       <li>
-                           <a href="index.html">Home</a>
-                       </li>
-                       <li>
-                           <a href="service.html">Service</a>
-                       </li>
-                       <li>
-                           <a href="portfolio.html">Portfolio</a>
-                       </li>
-                       <li>
-                           <a href="blog.html">Blog</a>
-                       </li>
-                       <li>
-                           <a href="faq.html">Faq</a>
-                       </li>
-                       <li>
-                           <a class="contact_btn" href="contact.html">Contact Us</a>
-                       </li>
-                   </ul>
-
-                   <div class="close_nav">
-                       <i class='bx bx-x'></i>
-                   </div>
-                </div>
-
-                <div class="hamburger_menu">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </div>
-      </header>
-    <!-- Header section end -->
-
+@section('body-content')
 
     <!-- Banner section start -->
-       <section class="banner_section">
+    <section class="banner_section">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -96,7 +32,7 @@
                              <!-- PopUp Video -->
                             <div class="banner_popup_video">
                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/jYuAmonOUvU?si=Y0T-s84MplUoObyO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    
+
                                 <div class="banner_video_close">
                                     <i class='bx bx-x'></i>
                                 </div>
@@ -107,14 +43,14 @@
 
                 <div class="col-lg-6">
                     <div class="banner_img">
-                        <img src="./assets/images/banner-img.png" alt="">
+                        <img src="{{ asset('public/frontend/assets/images/banner-img.png') }}" alt="">
                     </div>
                 </div>
             </div>
         </div>
        </section>
     <!-- Banner section end -->
-    
+
 
     <!-- Category section start -->
     <section class="category_section">
@@ -130,43 +66,43 @@
                 <div class="owl-carousel owl-theme" id="categorySlider">
                     <div class="category_details">
                         <div class="category_img">
-                            <img src="./assets/images/category-1.png" alt="">
+                            <img src="{{ asset('public/frontend/assets/images/category-1.png') }}" alt="">
                         </div>
                         <h3>Data mining</h3>
                     </div>
                     <div class="category_details">
                         <div class="category_img">
-                            <img src="./assets/images/category-1.png" alt="">
+                            <img src="{{ asset('public/frontend/assets/images/category-1.png') }}" alt="">
                         </div>
                         <h3>Data mining</h3>
                     </div>
                     <div class="category_details">
                         <div class="category_img">
-                            <img src="./assets/images/category-1.png" alt="">
+                            <img src="{{ asset('public/frontend/assets/images/category-1.png') }}" alt="">
                         </div>
                         <h3>Data mining</h3>
                     </div>
                     <div class="category_details">
                         <div class="category_img">
-                            <img src="./assets/images/category-1.png" alt="">
+                            <img src="{{ asset('public/frontend/assets/images/category-1.png') }}" alt="">
                         </div>
                         <h3>Data mining</h3>
                     </div>
                     <div class="category_details">
                         <div class="category_img">
-                            <img src="./assets/images/category-1.png" alt="">
+                            <img src="{{ asset('public/frontend/assets/images/category-1.png') }}" alt="">
                         </div>
                         <h3>Data mining</h3>
                     </div>
                     <div class="category_details">
                         <div class="category_img">
-                            <img src="./assets/images/category-1.png" alt="">
+                            <img src="{{ asset('public/frontend/assets/images/category-1.png') }}" alt="">
                         </div>
                         <h3>Data mining</h3>
                     </div>
                     <div class="category_details">
                         <div class="category_img">
-                            <img src="./assets/images/category-1.png" alt="">
+                            <img src="{{ asset('public/frontend/assets/images/category-1.png') }}" alt="">
                         </div>
                         <h3>Data mining</h3>
                     </div>
@@ -297,7 +233,7 @@
                         <div class="portfolio_container active_portfolio">
                             <div class="portfolio_showcase">
                                 <div class="portfolio_image">
-                                    <img src="./assets/images/portfolio-1.png" alt="">
+                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
                                     <div class="portfolio_overlay">
                                         <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
                                     </div>
@@ -308,7 +244,7 @@
 
                             <div class="portfolio_showcase">
                                 <div class="portfolio_image">
-                                    <img src="./assets/images/portfolio-1.png" alt="">
+                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
                                     <div class="portfolio_overlay">
                                         <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
                                     </div>
@@ -319,31 +255,7 @@
 
                             <div class="portfolio_showcase">
                                 <div class="portfolio_image">
-                                    <img src="./assets/images/portfolio-1.png" alt="">
-                                    <div class="portfolio_overlay">
-                                        <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
-                                    </div>
-                                </div>
-
-                                <h3>Tuning into user behaviors with analytics</h3>
-                            </div>
-                        </div>
-
-                        <div class="portfolio_container">
-                            <div class="portfolio_showcase">
-                                <div class="portfolio_image">
-                                    <img src="./assets/images/portfolio-1.png" alt="">
-                                    <div class="portfolio_overlay">
-                                        <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
-                                    </div>
-                                </div>
-
-                                <h3>Tuning into user behaviors with analytics</h3>
-                            </div>
-
-                            <div class="portfolio_showcase">
-                                <div class="portfolio_image">
-                                    <img src="./assets/images/portfolio-1.png" alt="">
+                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
                                     <div class="portfolio_overlay">
                                         <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
                                     </div>
@@ -356,7 +268,18 @@
                         <div class="portfolio_container">
                             <div class="portfolio_showcase">
                                 <div class="portfolio_image">
-                                    <img src="./assets/images/portfolio-1.png" alt="">
+                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
+                                    <div class="portfolio_overlay">
+                                        <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
+                                    </div>
+                                </div>
+
+                                <h3>Tuning into user behaviors with analytics</h3>
+                            </div>
+
+                            <div class="portfolio_showcase">
+                                <div class="portfolio_image">
+                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
                                     <div class="portfolio_overlay">
                                         <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
                                     </div>
@@ -369,7 +292,20 @@
                         <div class="portfolio_container">
                             <div class="portfolio_showcase">
                                 <div class="portfolio_image">
-                                    <img src="./assets/images/portfolio-1.png" alt="">
+                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
+                                    <div class="portfolio_overlay">
+                                        <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
+                                    </div>
+                                </div>
+
+                                <h3>Tuning into user behaviors with analytics</h3>
+                            </div>
+                        </div>
+
+                        <div class="portfolio_container">
+                            <div class="portfolio_showcase">
+                                <div class="portfolio_image">
+                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
                                     <div class="portfolio_overlay">
                                         <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
                                     </div>
@@ -393,7 +329,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 ">
                     <div class="about_image">
-                        <img src="./assets/images/about.png" alt="">
+                        <img src="{{ asset('public/frontend/assets/images/about.png') }}" alt="">
                     </div>
                 </div>
 
@@ -433,19 +369,19 @@
 
                 <div class="col-lg-4">
                    <div class="technology_images">
-                       <img src="./assets/images/technology1.png" alt="">
+                       <img src="{{ asset('public/frontend/assets/images/technology1.png') }}" alt="">
                        <h3>Power Bi</h3>
                    </div>
                 </div>
                 <div class="col-lg-4">
                    <div class="technology_images">
-                       <img src="./assets/images/technology1.png" alt="">
+                       <img src="{{ asset('public/frontend/assets/images/technology1.png') }}" alt="">
                        <h3>Tableau</h3>
                    </div>
                 </div>
                 <div class="col-lg-4">
                    <div class="technology_images">
-                       <img src="./assets/images/technology1.png" alt="">
+                       <img src="{{ asset('public/frontend/assets/images/technology1.png') }}" alt="">
                        <h3>Python/R</h3>
                    </div>
                 </div>
@@ -508,7 +444,7 @@
                         <p>+ Win Awards</p>
                     </div>
                </div>
-           </div>    
+           </div>
         </div>
       </section>
     <!-- Counter section end -->
@@ -599,7 +535,7 @@
                             </div>
 
                             <div class="testimonial_user_content">
-                                <img src="./assets/images/review-3.png" alt="">
+                                <img src="{{ asset('public/frontend/assets/images/review-3.png') }}" alt="">
                                 <div class="testimonial_user_title">
                                     <h3>Courtney Henry</h3>
                                     <p>Nursing Assistant</p>
@@ -621,7 +557,7 @@
                             </div>
 
                             <div class="testimonial_user_content">
-                                <img src="./assets/images/review-1.png" alt="">
+                                <img src="{{ asset('public/frontend/assets/images/review-1.png') }}" alt="">
                                 <div class="testimonial_user_title">
                                     <h3>Courtney Henry</h3>
                                     <p>Nursing Assistant</p>
@@ -642,7 +578,7 @@
                             </div>
 
                             <div class="testimonial_user_content">
-                                <img src="./assets/images/review-2.png" alt="">
+                                <img src="{{ asset('public/frontend/assets/images/review-2.png') }}" alt="">
                                 <div class="testimonial_user_title">
                                     <h3>Courtney Henry</h3>
                                     <p>Nursing Assistant</p>
@@ -670,7 +606,7 @@
 
                     <div class="owl-carousel owl-theme" id="teamSlider">
                         <div class="team_details">
-                            <img src="./assets/images/team-1.png" alt="">
+                            <img src="{{ asset('public/frontend/assets/images/team-1.png') }}" alt="">
 
                             <div class="team_content">
                                 <h2>Olivia Rhye</h2>
@@ -703,7 +639,7 @@
                         </div>
 
                         <div class="team_details">
-                            <img src="./assets/images/team-2.png" alt="">
+                            <img src="{{ asset('public/frontend/assets/images/team-2.png') }}" alt="">
 
                             <div class="team_content">
                                 <h2>Olivia Rhye</h2>
@@ -736,7 +672,7 @@
                         </div>
 
                         <div class="team_details">
-                            <img src="./assets/images/team-3.png" alt="">
+                            <img src="{{ asset('public/frontend/assets/images/team-3.png') }}" alt="">
 
                             <div class="team_content">
                                 <h2>Olivia Rhye</h2>
@@ -769,7 +705,7 @@
                         </div>
 
                         <div class="team_details">
-                            <img src="./assets/images/team-1.png" alt="">
+                            <img src="{{ asset('public/frontend/assets/images/team-1.png') }}" alt="">
 
                             <div class="team_content">
                                 <h2>Olivia Rhye</h2>
@@ -802,7 +738,7 @@
                         </div>
 
                         <div class="team_details">
-                            <img src="./assets/images/team-2.png" alt="">
+                            <img src="{{ asset('public/frontend/assets/images/team-2.png') }}" alt="">
 
                             <div class="team_content">
                                 <h2>Olivia Rhye</h2>
@@ -883,7 +819,7 @@
                     <div class="owl-carousel owl-theme" id="blogSlider">
                         <div class="blog_details">
                             <div class="blog_img">
-                                <img src="./assets/images/blog-1.png" alt="">
+                                <img src="{{ asset('public/frontend/assets/images/blog-1.png') }}" alt="">
 
                                 <div class="view_stack">
                                     <div class="view_stack_content">
@@ -909,7 +845,7 @@
                                <div class="hr"></div>
 
                                <div class="blog_user_content">
-                                   <img src="./assets/images/user-1.png" alt="">
+                                   <img src="{{ asset('public/frontend/assets/images/user-1.png') }}" alt="">
 
                                    <div class="blog_user_title">
                                         <h2>antixidant</h2>
@@ -921,7 +857,7 @@
 
                         <div class="blog_details">
                             <div class="blog_img">
-                                <img src="./assets/images/blog-2.png" alt="">
+                                <img src="{{ asset('public/frontend/assets/images/blog-2.png') }}" alt="">
 
                                 <div class="view_stack">
                                     <div class="view_stack_content">
@@ -947,7 +883,7 @@
                                <div class="hr"></div>
 
                                <div class="blog_user_content">
-                                   <img src="./assets/images/user-2.png" alt="">
+                                   <img src="{{ asset('public/frontend/assets/images/user-2.png') }}" alt="">
 
                                    <div class="blog_user_title">
                                         <h2>antixidant</h2>
@@ -959,7 +895,7 @@
 
                         <div class="blog_details">
                             <div class="blog_img">
-                                <img src="./assets/images/blog-3.png" alt="">
+                                <img src="{{ asset('public/frontend/assets/images/blog-3.png') }}" alt="">
 
                                 <div class="view_stack">
                                     <div class="view_stack_content">
@@ -985,7 +921,7 @@
                                <div class="hr"></div>
 
                                <div class="blog_user_content">
-                                   <img src="./assets/images/user-3.png" alt="">
+                                   <img src="{{ asset('public/frontend/assets/images/user-3.png') }}" alt="">
 
                                    <div class="blog_user_title">
                                         <h2>antixidant</h2>
@@ -997,7 +933,7 @@
 
                         <div class="blog_details">
                             <div class="blog_img">
-                                <img src="./assets/images/blog-1.png" alt="">
+                                <img src="{{ asset('public/frontend/assets/images/blog-1.png') }}" alt="">
 
                                 <div class="view_stack">
                                     <div class="view_stack_content">
@@ -1023,7 +959,7 @@
                                <div class="hr"></div>
 
                                <div class="blog_user_content">
-                                   <img src="./assets/images/user-1.png" alt="">
+                                   <img src="{{ asset('public/frontend/assets/images/user-1.png') }}" alt="">
 
                                    <div class="blog_user_title">
                                         <h2>antixidant</h2>
@@ -1038,172 +974,9 @@
        </section>
     <!-- Blog section end -->
 
-
-    <!-- Footer section start  -->
-    <footer>
-        <div class="container">
-            <div class="main-footer">
-                <div class="row">
-                    <div class="col-lg-4 ">
-                        <div class="widget-1">
-                            <a class="navbar-brand" href=""> 
-                                <img src="./assets/images/footer-logo.png" alt="">
-                            </a>
-                            <p> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas bibendum.</p>
-
-                            <ul class="contact_info">
-                                <li>
-                                    <i class='bx bxs-phone'></i>
-                                    <span>(303) 555-0105</span>
-                                </li>
-                                <li>
-                                    <i class='bx bxs-envelope'></i>
-                                    <span>kenzi.lawson@example.com</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-sm-6 col-md-6">
-                        <div class="widget-2">
-                            <h4>Quick Links</h4>
-                            <ul>
-                                <li>
-                                    <div class="service_list">
-                                        <i class='bx bx-right-arrow-alt'></i>
-                                        <span>
-                                            <a href="about-us.html">About Us</a>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="service_list">
-                                        <i class='bx bx-right-arrow-alt'></i>
-                                        <span>
-                                            <a href="contact.html">Contact Us</a>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="service_list">
-                                        <i class='bx bx-right-arrow-alt'></i>
-                                        <span>
-                                            <a href="">Terms & Condition</a>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="service_list">
-                                        <i class='bx bx-right-arrow-alt'></i>
-                                        <span>
-                                            <a href="">Privacy Policy</a>
-                                        </span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="service_list">
-                                        <i class='bx bx-right-arrow-alt'></i>
-                                        <span>
-                                            <a href="faq.html">Faq</a>
-                                        </span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-2 col-sm-6 col-md-6">
-                        <div class="widget-2">
-                            <h4>Services</h4>
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <div class="service_list">
-                                            <i class='bx bx-right-arrow-alt'></i>
-                                            <span>Machine Learning</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="service_list">
-                                            <i class='bx bx-right-arrow-alt'></i>
-                                            <span>Data Analytics</span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <div class="service_list">
-                                            <i class='bx bx-right-arrow-alt'></i>
-                                            <span>Computer Vision</span>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-    
-                    <div class="col-lg-4">
-                        <div class="widget-2">
-                            <h4>Our Newsletter </h4>
-                            <p>Subscribe to Our Newsletter and try our Software first</p>
-
-                            <div class="subscription_field">
-                                <form action="">
-                                    <input type="text" name="" class="subscription_form" placeholder="Enter Your Mail"> 
-                                    <button class="subscribe_btn" type="submit">Subscribe</button>
-                                </form>
-                            </div>
-
-                            <ul class="social_links">
-                                <li>
-                                    <a href="">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <i class="fa-brands fa-x-twitter"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <i class="fa-brands fa-instagram"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <i class="fa-brands fa-linkedin-in"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="footer_copyright">
-                            <p>Copyright@ 2024 All Rights Reserved.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>    
-    <!-- Footer section end -->
+@endsection
 
 
-    <!-- Jquery CDN -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+@push('add-js')
 
-    <!-- Owl Carousel JS -->
-    <script src="./assets/owl-carousel/js/owl.carousel.min.js"></script>
-
-    <!-- Bootstrap CDN JS Link -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <!-- Main JS Linkup -->
-    <script src="./assets/js/main.js"></script>
-
-</body>
-</html>
+@endpush
