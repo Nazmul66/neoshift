@@ -30,22 +30,6 @@
                                 <div class="service_list">
                                     <i class='bx bx-right-arrow-alt'></i>
                                     <span>
-                                        <a href="{{ route('about') }}">About Us</a>
-                                    </span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="service_list">
-                                    <i class='bx bx-right-arrow-alt'></i>
-                                    <span>
-                                        <a href="{{ route('contact') }}">Contact Us</a>
-                                    </span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="service_list">
-                                    <i class='bx bx-right-arrow-alt'></i>
-                                    <span>
                                         <a href="{{ route('home') }}">Terms & Condition</a>
                                     </span>
                                 </div>

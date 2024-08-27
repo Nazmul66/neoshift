@@ -15,17 +15,17 @@
                        <a href="{{ route('home') }}">Home</a>
                    </li>
                    <li>
-                       <a href="{{ route('service') }}">Service</a>
+                       <a href="{{ route('service') }}">What We Offer</a>
                    </li>
                    <li>
                        <a href="{{ route('portfolio') }}">Portfolio</a>
                    </li>
-                   <li>
+                   {{-- <li>
                        <a href="{{ route('blog') }}">Blog</a>
                    </li>
                    <li>
                        <a href="{{ route('faq') }}">Faq</a>
-                   </li>
+                   </li> --}}
                    <li>
                        <a class="contact_btn" href="{{ route('contact') }}">Contact Us</a>
                    </li>
