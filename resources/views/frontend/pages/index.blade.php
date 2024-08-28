@@ -52,7 +52,7 @@
     <!-- Banner section end -->
 
 
-    <!-- Schedule section start -->
+    {{-- <!-- Schedule section start -->
       <section class="schedule_section">
         <div class="container">
             <div class="row align-items-center">
@@ -109,10 +109,10 @@
             </div>
         </div>
       </section>
-    <!-- Schedule section start -->
+    <!-- Schedule section start --> --}}
 
 
-    <!-- Category section start -->
+    {{-- <!-- Category section start -->
     <section class="category_section">
         <div class="container">
             <div class="row">
@@ -265,33 +265,33 @@
                 </div>
             </div>
         </div>
-   <!-- Service section end -->
+   <!-- Service section end --> --}}
 
 
     <!-- Video section start -->
     <section class="video_section">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="video-setup">
-                    <h1>Our Most Recent Data Analytics Strategy Story</h1>
-                    <div class="video-play">
-                        <button class="video_btn">
-                            <i class='bx bxs-right-arrow'></i>
-                        </button>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="video-setup">
+                        <h1>Our Most Recent Data Analytics Strategy Story</h1>
+                        <div class="video-play">
+                            <button class="video_btn">
+                                <i class='bx bxs-right-arrow'></i>
+                            </button>
+                        </div>
 
-                    <div class="popup_video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/jYuAmonOUvU?si=Y0T-s84MplUoObyO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="popup_video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/jYuAmonOUvU?si=Y0T-s84MplUoObyO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-                        <div class="video_close">
-                            <i class='bx bx-x'></i>
+                            <div class="video_close">
+                                <i class='bx bx-x'></i>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
     </section>
    <!-- Video section end -->
 
@@ -341,10 +341,10 @@
                 <div class="col-lg-12">
                     <div class="portfolio_menu">
                         <ul>
-                            <li class="menu_listing active_portfolio">E-commerce</li>
-                            <li class="menu_listing">Real-Estate</li>
-                            <li class="menu_listing">Corporate</li>
-                            <li class="menu_listing">Travel Agency</li>
+                            <li class="menu_listing active_portfolio"><i class='bx bx-store-alt'></i> E-commerce</li>
+                            <li class="menu_listing"><i class='bx bxs-business'></i> Real-Estate</li>
+                            <li class="menu_listing"><i class='bx bxs-bar-chart-alt-2'></i> Corporate</li>
+                            <li class="menu_listing"><i class='bx bxs-plane-alt'></i> Travel Agency</li>
                         </ul>
                     </div>
 
@@ -442,40 +442,7 @@
     <!-- Portfolio Section end -->
 
 
-    <!-- About section start -->
-      <section class="about_section">
-          <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 ">
-                    <div class="about_image">
-                        <img src="{{ asset('public/frontend/assets/images/about.png') }}" alt="">
-                    </div>
-                </div>
-
-                <div class="col-lg-6 ">
-                    <div class="about_detail">
-                        <h5>About Us</h5>
-                        <h2>Transform your data. Transform your business.</h2>
-
-                        <div class="about_description_container">
-                            <p>Sed eget pulvinar orci, sit amet vestibulum tellus. Quisque semper sem vel sagittis facilisis. Donec at facilisis risus. Curabitur porttitor ex id blandit vulputate. Donec vulputate eleifend mauris. In commodo elementum turpis, accumsan commodo magn</p>
-
-                            <ul>
-                                <li>Sed eget pulvinar orci, sit amet vestibulum tellus.</li>
-                                <li>Sed eget pulvinar orci, sit amet vestibulum tellus.</li>
-                                <li>Sed eget pulvinar orci, sit amet vestibulum tellus.</li>
-                                <li>Sed eget pulvinar orci, sit amet vestibulum tellus.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-      </section>
-    <!-- About section end -->
-
-
-    <!-- Technology section start -->
+    {{-- <!-- Technology section start -->
        <section class="technology_section">
           <div class="container">
             <div class="row">
@@ -507,10 +474,10 @@
             </div>
           </div>
        </section>
-    <!-- Technology section end -->
+    <!-- Technology section end --> --}}
 
 
-    <!-- Faq section start -->
+    {{-- <!-- Faq section start -->
       <section class="faq_section">
           <div class="container">
             <div class="row">
@@ -567,7 +534,7 @@
             </div>
           </div>
       </section>
-    <!-- Faq section end -->
+    <!-- Faq section end --> --}}
 
 
     <!-- Testimonial section start -->
@@ -837,7 +804,7 @@
     <!-- Team section end -->
 
 
-    <!-- Call-to-action section start -->
+    {{-- <!-- Call-to-action section start -->
         <section class="cta_section">
             <div class="container">
                 <div class="row">
@@ -862,7 +829,39 @@
                 </div>
             </div>
         </section>
-    <!-- Call-to-action section end -->
+    <!-- Call-to-action section end --> --}}
+
+    <!-- About section start -->
+        <section class="about_section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 ">
+                        <div class="about_image">
+                            <img src="{{ asset('public/frontend/assets/images/about.png') }}" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 ">
+                        <div class="about_detail">
+                            <h5>About Us</h5>
+                            <h2>Transform your data. Transform your business.</h2>
+
+                            <div class="about_description_container">
+                                <p>Sed eget pulvinar orci, sit amet vestibulum tellus. Quisque semper sem vel sagittis facilisis. Donec at facilisis risus. Curabitur porttitor ex id blandit vulputate. Donec vulputate eleifend mauris. In commodo elementum turpis, accumsan commodo magn</p>
+
+                                <ul>
+                                    <li>Sed eget pulvinar orci, sit amet vestibulum tellus.</li>
+                                    <li>Sed eget pulvinar orci, sit amet vestibulum tellus.</li>
+                                    <li>Sed eget pulvinar orci, sit amet vestibulum tellus.</li>
+                                    <li>Sed eget pulvinar orci, sit amet vestibulum tellus.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- About section end -->
 
 
     <!-- Blog section start -->

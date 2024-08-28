@@ -4,8 +4,9 @@
             <div class="row">
                 <div class="col-lg-4 ">
                     <div class="widget-1">
-                        <a class="navbar-brand" href="{{ route('home') }}">
+                        <a class="navbar_brand" href="{{ route('home') }}">
                             <img src="{{ asset('public/frontend/assets/images/footer-logo.png') }}" alt="">
+                            <h3>Shariar Ridth</h3>
                         </a>
                         <p> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas bibendum.</p>
 

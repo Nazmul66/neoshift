@@ -143,12 +143,46 @@ ul li{
         Header Section
 *********************************/
 header{
-    padding: 24px 0;
+    padding: 0 0 24px;
+}
+.contact_bio{
+    padding: 8px 0;
+    background: linear-gradient(190deg, #02429A 0%, #026CFF 44%, #02429A 100%);
+}
+.contact_bio_container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;  
+}
+.contact_bio_container ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.contact_bio_container ul li{
+   list-style: none;
+   display: inline-block;
+   margin: 0 42px;
+}
+.contact_bio_container ul li a{
+    font-family: "Lato", sans-serif;
+}
+.contact_bio_container ul li .contact_list i{
+    color: #FFF;
+    margin-right: 8px;
+}
+.contact_bio_container ul li .contact_list span{
+    font-family: "Lato", sans-serif;
+    color: #FFF;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
 }
 .main_container{
    max-width: 1140px;
    width: 100%;
    margin: 0 auto;
+   padding-top: 20px;
 }
 nav{
     display: flex;
@@ -160,19 +194,33 @@ nav .hamburger_menu{
     display: none;
 }
 nav .header_img{
-   width: 25%;
+   width: 30%;
+   display: flex;
+   align-items: end;
 }
 nav .responsive_header_img{
     display: none;
 }
 nav .header_img img{
-   width: 100%;
+    width: 55px;
+    display: block;
+    margin-right: 12px;
+}
+nav .header_img h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+nav .header_img h3 span{
+    font-family: "Poppins", sans-serif;
+    color: #026CFF;
 }
 nav .responsive_header_img img{
     width: 100%;
  }
 .nav_menu{
-    width: 75%;
+    width: 70%;
 }
 .nav_menu .nav_list{
     text-align: end;
@@ -202,13 +250,34 @@ nav .responsive_header_img img{
 @media (min-width: 320px) and (max-width: 576px){
     header {
         position: fixed;
-        padding: 24px 20px;
+        padding: 0;
         top: 0;
         left: 0;
         right: 0;
         background: #FFF;
         z-index: 90;
         box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    }
+    .contact_bio {
+        padding: 8px 20px;
+    }
+    .contact_bio_container ul {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+    }
+    .contact_bio_container ul li {
+        margin: 0;
+    }
+    .contact_bio_container ul li .contact_list i {
+        font-size: 14px;
+        margin-right: 4px;
+    }
+    .contact_bio_container ul li .contact_list span {
+        font-size: 12px;
+    }    
+    .main_container {
+        padding: 14px 20px;
     }
     .nav_menu {
         position: absolute;
@@ -1143,6 +1212,10 @@ nav .responsive_header_img img{
     transition: all 0.3s ease-in-out;
     cursor: pointer;
 }
+.portfolio_menu ul .menu_listing i{
+    margin-right: 6px;
+    font-size: 18px;
+}
 .portfolio_menu ul .menu_listing.active_portfolio{
     color: #026CFF;
     background-color: rgba(2, 108, 255, 0.18);
@@ -2039,7 +2112,7 @@ nav .responsive_header_img img{
         Testimonial Section
 *********************************/
 .testimonial_section{
-    padding: 6rem 0 4rem;
+    padding: 0 0 4rem;
  }
  .testimonial_title{
      text-align: center;
@@ -2109,7 +2182,7 @@ nav .responsive_header_img img{
 
  @media (min-width: 320px) and (max-width: 576px){
     .testimonial_section {
-        padding: 4rem 20px;
+        padding: 0 20px 4rem;
     }
     .testimonial_title {
         margin-bottom: 30px;
@@ -2882,9 +2955,21 @@ footer {
 .main-footer {
     padding: 30px 50px;
 }
-.widget-1 .navbar-brand img{
-   width: 250px;
-   margin-bottom: 24px;
+.widget-1 .navbar_brand{
+    display: flex;
+    align-items: end;
+    margin-bottom: 24px;
+}
+.widget-1 .navbar_brand img{
+    width: 65px;
+    display: block;
+    margin-right: 12px;
+}
+.widget-1 .navbar_brand h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFF;
 }
 .widget-1 p {
     font-size: 15px;
