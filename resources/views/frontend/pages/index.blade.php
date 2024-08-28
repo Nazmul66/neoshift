@@ -5,7 +5,7 @@
 @endpush
 
 @push('add-css')
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 @endpush
 
 
@@ -50,6 +50,66 @@
         </div>
        </section>
     <!-- Banner section end -->
+
+
+    <!-- Schedule section start -->
+      <section class="schedule_section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 order-2 order-sm-2 order-md-2 order-lg-1">
+                  <div class="schedual_meeting_img">
+                     <img src="{{ asset('public/frontend/assets/images/schedule_meeting.png') }}" alt="">
+                  </div>
+                </div>
+
+                <div class="col-lg-6 offset-lg-1 order-1 order-sm-1 order-md-1 order-lg-2">
+                    <div class="contact_form">
+                        <div class="schedule_title">
+                            <h5>Schedule</h5>
+                            <h2>Schedule Meeting</h2>
+                        </div>
+
+                        <form action="">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form_data">
+                                        <input type="text" name="name" class="form_control" id="name" placeholder="Full Name....">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form_data">
+                                        <input type="text" name="phone" class="form_control" id="phone" placeholder="Mobile Phone....">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form_data">
+                                        <input type="email" name="email" class="form_control" id="email" placeholder="Email Address....">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="form_data">
+                                        <input type="text" name="company_name" class="form_control" id="company_name" placeholder="Company Name....">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12">
+                                    <div class="form_data">
+                                        <input type="datetime-local" class="form_control" id="datetimepicker" name="date_time" placeholder="Select Date & Time....">
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="contact_buttons">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    <!-- Schedule section start -->
 
 
     <!-- Category section start -->
@@ -206,6 +266,65 @@
             </div>
         </div>
    <!-- Service section end -->
+
+
+    <!-- Video section start -->
+    <section class="video_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="video-setup">
+                    <h1>Our Most Recent Data Analytics Strategy Story</h1>
+                    <div class="video-play">
+                        <button class="video_btn">
+                            <i class='bx bxs-right-arrow'></i>
+                        </button>
+                    </div>
+
+                    <div class="popup_video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/jYuAmonOUvU?si=Y0T-s84MplUoObyO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                        <div class="video_close">
+                            <i class='bx bx-x'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+   <!-- Video section end -->
+
+
+   <!-- Counter section start -->
+     <section class="counter_section">
+       <div class="container">
+          <div class="row">
+              <div class="counter_contents">
+                  <div class="counter_title">
+                      <h1>500</h1>
+                      <p>+ Project Done</p>
+                  </div>
+
+                  <div class="counter_title">
+                    <h1>150</h1>
+                    <p>+ Cup Of Tea</p>
+                  </div>
+
+                   <div class="counter_title">
+                       <h1>120</h1>
+                       <p>+ Total Employee</p>
+                   </div>
+
+                   <div class="counter_title">
+                       <h1>50</h1>
+                       <p>+ Win Awards</p>
+                   </div>
+              </div>
+          </div>
+       </div>
+     </section>
+   <!-- Counter section end -->
 
 
    <!-- Portfolio Section Start -->
@@ -389,65 +508,6 @@
           </div>
        </section>
     <!-- Technology section end -->
-
-
-    <!-- Video section start -->
-      <section class="video_section">
-         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="video-setup">
-                        <h1>Our Most Recent Data Analytics Strategy Story</h1>
-                        <div class="video-play">
-                            <button class="video_btn">
-                                <i class='bx bxs-right-arrow'></i>
-                            </button>
-                        </div>
-
-                        <div class="popup_video">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/jYuAmonOUvU?si=Y0T-s84MplUoObyO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-                            <div class="video_close">
-                                <i class='bx bx-x'></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-         </div>
-      </section>
-    <!-- Video section end -->
-
-
-    <!-- Counter section start -->
-      <section class="counter_section">
-        <div class="container">
-           <div class="row">
-               <div class="counter_contents">
-                   <div class="counter_title">
-                       <h1>500</h1>
-                       <p>+ Project Done</p>
-                   </div>
-
-                   <div class="counter_title">
-                     <h1>150</h1>
-                     <p>+ Cup Of Tea</p>
-                   </div>
-
-                    <div class="counter_title">
-                        <h1>120</h1>
-                        <p>+ Total Employee</p>
-                    </div>
-
-                    <div class="counter_title">
-                        <h1>50</h1>
-                        <p>+ Win Awards</p>
-                    </div>
-               </div>
-           </div>
-        </div>
-      </section>
-    <!-- Counter section end -->
 
 
     <!-- Faq section start -->
@@ -979,4 +1039,14 @@
 
 @push('add-js')
 
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+    flatpickr("#datetimepicker", {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        // minDate: "today",
+        // maxDate: new Date().fp_incr(14)
+    });
+</script>
 @endpush

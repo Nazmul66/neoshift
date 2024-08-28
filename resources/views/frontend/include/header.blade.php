@@ -20,6 +20,9 @@
                    <li>
                        <a href="{{ route('portfolio') }}">Portfolio</a>
                    </li>
+                   <li>
+                       <a href="{{ route('schedule-meeting') }}">Schedule Meeting</a>
+                   </li>
                    {{-- <li>
                        <a href="{{ route('blog') }}">Blog</a>
                    </li>

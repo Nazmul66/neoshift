@@ -5,7 +5,7 @@
 @endpush
 
 @push('add-css')
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 @endpush
 
 
@@ -17,7 +17,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="breadcrumb_content">
-                            <h1>Contact-Us</h1>
+                            <h1>Schedule Meeting</h1>
                             <ul class="breadcrumb_list">
                                 <li>
                                     <a href="index.html">Home</a>
@@ -26,7 +26,7 @@
                                     <a type="button">/</a>
                                 </li>
                                 <li>
-                                    <a href="javascript::void()">Contact-Us</a>
+                                    <a href="javascript::void()">Schedule Meeting</a>
                                 </li>
                             </ul>
                         </div>
@@ -37,66 +37,79 @@
     <!-- Breadcrumb section end -->
 
 
-    <!-- Contact section start -->
-        <section class="contact_section">
-            <div class="container">
-                <div class="contact_detail_container">
-                    <div class="google_map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d912.5807025482335!2d90.36939439048!3d23.80711741013939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjPCsDQ4JzI0LjUiTiA5MMKwMjInMDguOCJF!5e0!3m2!1sen!2sbd!4v1723920384329!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+    <!-- Schedule section start -->
+    <section class="schedule_section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 order-2 order-sm-2 order-md-2 order-lg-1">
+                  <div class="schedual_meeting_img">
+                     <img src="{{ asset('public/frontend/assets/images/schedule_meeting.png') }}" alt="">
+                  </div>
+                </div>
 
+                <div class="col-lg-6 offset-lg-1 order-1 order-sm-1 order-md-1 order-lg-2">
                     <div class="contact_form">
-                        <h2>Contact With Us</h2>
+                        <div class="schedule_title">
+                            <h5>Schedule</h5>
+                            <h2>Schedule Meeting</h2>
+                        </div>
 
                         <form action="">
                             <div class="row">
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form_data">
-                                        <input type="text" name="name" class="form_control" id="name" placeholder="Your Name....">
+                                        <input type="text" name="name" class="form_control" id="name" placeholder="Full Name....">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-6 col-md-6">
                                     <div class="form_data">
-                                        <input type="text" name="phone" class="form_control" id="phone" placeholder="Your Phone....">
+                                        <input type="text" name="phone" class="form_control" id="phone" placeholder="Mobile Phone....">
                                     </div>
                                 </div>
 
-                                <div class="col-lg-12 col-md-6">
+                                <div class="col-lg-6 col-md-6">
                                     <div class="form_data">
                                         <input type="email" name="email" class="form_control" id="email" placeholder="Email Address....">
                                     </div>
                                 </div>
 
-                                <div class="col-lg-12 col-md-6">
+                                <div class="col-lg-6 col-md-6">
                                     <div class="form_data">
-                                        <select class="form_control" name="service" id="service">
-                                           <option selected>Open This Select Service</option>
-                                           <option value="1">One</option>
-                                           <option value="2">Two</option>
-                                           <option value="3">Three</option>
-                                        </select>
+                                        <input type="text" name="company_name" class="form_control" id="company_name" placeholder="Company Name....">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-12">
                                     <div class="form_data">
-                                        <textarea class="form_textarea" id="notes" name="notes" placeholder="Special Notes"></textarea>
+                                        <input type="datetime-local" class="form_control" id="datetimepicker" name="date_time" placeholder="Select Date & Time....">
                                     </div>
                                 </div>
 
-                                <button type="submit" class="contact_buttons">Contact Us</button>
+                                <button type="submit" class="contact_buttons">Submit</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-        </section>
-    <!-- Contact section end -->
+        </div>
+      </section>
+    <!-- Schedule section start -->
 
 @endsection
 
 
 @push('add-js')
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+    flatpickr("#datetimepicker", {
+        enableTime: true,
+        dateFormat: "Y-m-d H:i",
+        // minDate: "today",
+        // maxDate: new Date().fp_incr(14)
+    });
+</script>
 
 @endpush
