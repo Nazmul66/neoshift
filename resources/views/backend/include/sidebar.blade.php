@@ -87,18 +87,13 @@
         </a>
         <ul class="menu-sub">
           <li class="menu-item">
-            <a href="pages-account-settings-account.html" class="menu-link">
-              <div data-i18n="Account">Slider Section</div>
+            <a href="{{ route('admin.blog.store') }}" class="menu-link">
+              <div data-i18n="Account">Blog Section</div>
             </a>
           </li>
           <li class="menu-item">
-            <a href="pages-account-settings-notifications.html" class="menu-link">
+            <a href="{{ route('admin.about.index') }}" class="menu-link">
               <div data-i18n="Notifications">About Section</div>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="pages-account-settings-connections.html" class="menu-link">
-              <div data-i18n="Connections">Contact Section</div>
             </a>
           </li>
         </ul>
@@ -108,7 +103,7 @@
       <li class="menu-header small text-uppercase"><span class="menu-header-text">Options</span></li>
       <!-- Cards -->
       <li class="menu-item">
-        <a href="cards-basic.html" class="menu-link">
+        <a href="{{ route('admin.basic-info.index') }}" class="menu-link">
           <i class="menu-icon tf-icons bx bx-collection"></i>
           <div data-i18n="Basic">Settings</div>
         </a>
