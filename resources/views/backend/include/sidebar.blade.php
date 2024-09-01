@@ -137,7 +137,7 @@
           </li>
 
           <li class="menu-item">
-            <a href="{{ route('admin.banner.index') }}" class="menu-link">
+            <a href="{{ route('admin.portfolio-manage.index') }}" class="menu-link">
               <div data-i18n="Account">Manage</div>
             </a>
           </li>

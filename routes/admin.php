@@ -9,6 +9,7 @@ use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\CounterController;
 use App\Http\Controllers\Backend\PortfolioCategoryController;
+use App\Http\Controllers\Backend\PortfolioManageController;
 
 
 Route::group(["prefix" => "admin"], function(){
@@ -18,6 +19,11 @@ Route::group(["prefix" => "admin"], function(){
     Route::resource('portfolio-category', PortfolioCategoryController::class)->names('admin.portfolio-category');
     Route::get('/get-portfolio-category',[PortfolioCategoryController::class,'getData'])->name('admin.get-portfolio-category');
     Route::post('/portfolio-category/status',[PortfolioCategoryController::class,'adminPortfolioCategoryStatus'])->name('admin.portfolio-category.status');
+
+    //____ Portfolio Manage ____//
+    Route::resource('portfolio-manage', PortfolioManageController::class)->names('admin.portfolio-manage');
+    Route::get('/get-portfolio-manage',[PortfolioManageController::class,'getData'])->name('admin.get-portfolio-manage');
+    Route::post('/portfolio-manage/status',[PortfolioManageController::class,'adminPortfolioManageStatus'])->name('admin.portfolio-manage.status');
 
     //____ Testimonial ____//
     Route::resource('testimonial', TestimonialController::class)->names('admin.testimonial');
