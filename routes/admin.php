@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\BasicInfoController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\TestimonialController;
+use App\Http\Controllers\Backend\BannerController;
 
 
 Route::group(["prefix" => "admin"], function(){
@@ -25,6 +26,9 @@ Route::group(["prefix" => "admin"], function(){
     Route::resource('blog', BlogController::class)->names('admin.blog');
     Route::get('/get-blog',[BlogController::class,'getData'])->name('admin.get-blog');
     Route::post('/blog/status',[BlogController::class,'adminBlogStatus'])->name('admin.blog.status');
+
+    //____ Banner ____//
+    Route::resource('banner', BannerController::class)->names('admin.banner');
 
     //____ About ____//
     Route::resource('about', AboutController::class)->names('admin.about');

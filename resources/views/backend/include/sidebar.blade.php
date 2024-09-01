@@ -87,6 +87,12 @@
         </a>
         <ul class="menu-sub">
           <li class="menu-item">
+            <a href="{{ route('admin.banner.index') }}" class="menu-link">
+              <div data-i18n="Account">Banner Section</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
             <a href="{{ route('admin.testimonial.index') }}" class="menu-link">
               <div data-i18n="Account">Testimonial Section</div>
             </a>
