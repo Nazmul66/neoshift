@@ -8,11 +8,17 @@ use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\CounterController;
+use App\Http\Controllers\Backend\PortfolioCategoryController;
 
 
 Route::group(["prefix" => "admin"], function(){
     Route::view('/dashboard', "backend.pages.dashboard")->name('dashboard');
     
+    //____ Portfolio Category ____//
+    Route::resource('portfolio-category', PortfolioCategoryController::class)->names('admin.portfolio-category');
+    Route::get('/get-portfolio-category',[PortfolioCategoryController::class,'getData'])->name('admin.get-portfolio-category');
+    Route::post('/portfolio-category/status',[PortfolioCategoryController::class,'adminPortfolioCategoryStatus'])->name('admin.portfolio-category.status');
+
     //____ Testimonial ____//
     Route::resource('testimonial', TestimonialController::class)->names('admin.testimonial');
     Route::get('/get-testimonial',[TestimonialController::class,'getData'])->name('admin.get-testimonial');
