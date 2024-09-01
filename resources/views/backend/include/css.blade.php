@@ -7,6 +7,8 @@
 
 <meta name="description" content="" />
 
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="{{ asset('public/backend/assets/img/favicon/favicon.ico') }}" />
 
@@ -23,12 +25,14 @@
 <link rel="stylesheet" href="{{ asset('public/backend/assets/vendor/css/core.cs') }}s" class="template-customizer-core-css" />
 <link rel="stylesheet" href="{{ asset('public/backend/assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
 <link rel="stylesheet" href="{{ asset('public/backend/assets/css/demo.css') }}" />
-<link rel="stylesheet" href="{{ asset('public/backend/assets/css/style.css') }}" />
+
 
 <!-- Vendors CSS -->
 <link rel="stylesheet" href="{{ asset('public/backend/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
 <link rel="stylesheet" href="{{ asset('public/backend/assets/vendor/libs/apex-charts/apex-charts.css') }}" />
+
+<link rel="stylesheet" href="{{ asset('public/backend/assets/css/style.css') }}" />
 
 @stack('add-css')
 
