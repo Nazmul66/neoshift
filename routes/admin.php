@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\TeamController;
 use App\Http\Controllers\Backend\TestimonialController;
 use App\Http\Controllers\Backend\BannerController;
+use App\Http\Controllers\Backend\CounterController;
 
 
 Route::group(["prefix" => "admin"], function(){
@@ -29,6 +30,9 @@ Route::group(["prefix" => "admin"], function(){
 
     //____ Banner ____//
     Route::resource('banner', BannerController::class)->names('admin.banner');
+
+    //____ Counter ____//
+    Route::resource('counter', CounterController::class)->names('admin.counter');
 
     //____ About ____//
     Route::resource('about', AboutController::class)->names('admin.about');

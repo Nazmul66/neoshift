@@ -93,6 +93,12 @@
           </li>
 
           <li class="menu-item">
+            <a href="{{ route('admin.counter.index') }}" class="menu-link">
+              <div data-i18n="Account">Counter Section</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
             <a href="{{ route('admin.testimonial.index') }}" class="menu-link">
               <div data-i18n="Account">Testimonial Section</div>
             </a>

@@ -37,7 +37,8 @@
                             @if ( !empty( $banner ) )
                             value="{{ $banner->title }}"
                             @endif
-                            required>
+                            required
+                        >
                     </div>
 
                     <div class="col mb-3">
