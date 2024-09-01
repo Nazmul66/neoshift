@@ -5,11 +5,17 @@ use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\BasicInfoController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\TeamController;
+use App\Http\Controllers\Backend\TestimonialController;
 
 
 Route::group(["prefix" => "admin"], function(){
     Route::view('/dashboard', "backend.pages.dashboard")->name('dashboard');
     
+    //____ Testimonial ____//
+    Route::resource('testimonial', TestimonialController::class)->names('admin.testimonial');
+    Route::get('/get-testimonial',[TestimonialController::class,'getData'])->name('admin.get-testimonial');
+    Route::post('/testimonial/status',[TestimonialController::class,'adminTestimonialStatus'])->name('admin.testimonial.status');
+
     //____ Team ____//
     Route::resource('team', TeamController::class)->names('admin.team');
     Route::get('/get-team',[TeamController::class,'getData'])->name('admin.get-team');
