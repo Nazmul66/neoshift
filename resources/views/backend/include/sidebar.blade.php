@@ -87,10 +87,17 @@
         </a>
         <ul class="menu-sub">
           <li class="menu-item">
-            <a href="{{ route('admin.blog.store') }}" class="menu-link">
+            <a href="{{ route('admin.team.index') }}" class="menu-link">
+              <div data-i18n="Account">Team Section</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="{{ route('admin.blog.index') }}" class="menu-link">
               <div data-i18n="Account">Blog Section</div>
             </a>
           </li>
+
           <li class="menu-item">
             <a href="{{ route('admin.about.index') }}" class="menu-link">
               <div data-i18n="Notifications">About Section</div>
