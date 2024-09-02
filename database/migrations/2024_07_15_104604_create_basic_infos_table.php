@@ -34,6 +34,7 @@ return new class extends Migration
 
             // Google map
             $table->text('google_map')->nullable();
+            $table->text('calendly_api')->nullable();
 
             //footer
             $table->text('favicon')->nullable();

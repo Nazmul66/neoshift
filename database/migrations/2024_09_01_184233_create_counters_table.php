@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('counters', function (Blueprint $table) {
             $table->id();
             $table->string('main_title');
-            $table->string('youtube_video')->nullable();
+            $table->text('youtube_video')->nullable();
             $table->string('image');
             $table->string('project_title');
             $table->string('employee_title');

@@ -22,7 +22,7 @@ class PortfolioCategoryController extends Controller
         return DataTables::of($portfolioCategories)
              ->addIndexColumn()
              ->addColumn('icon', function ($portfolioCategory) {
-                return '<img src="'. asset($portfolioCategory->category_icon) .'" alt="" style="width: 65px;">';
+                return '<span class="badge bg-success">'. $portfolioCategory->category_icon .'</span>';
              })
              ->addColumn('status', function ($portfolioCategory) {
                 if ($portfolioCategory->status == 1) {
@@ -55,17 +55,8 @@ class PortfolioCategoryController extends Controller
         $portfolioCategory = new PortfolioCategory();
 
         $portfolioCategory->category_name       = $request->category_name;
+        $portfolioCategory->category_icon       = $request->category_icon;
         $portfolioCategory->status              = $request->status;
-
-        if( $request->file('category_icon') ){
-            $category_icon = $request->file('category_icon');
-
-            $imageName          = microtime('.') . '.' . $category_icon->getClientOriginalExtension();
-            $imagePath          = 'public/backend/image/testimonial/';
-            $category_icon->move($imagePath, $imageName);
-
-            $portfolioCategory->category_icon   = $imagePath . $imageName;
-        }
 
         $portfolioCategory->save();
 
@@ -112,22 +103,8 @@ class PortfolioCategoryController extends Controller
         $portfolioCategory  = PortfolioCategory::find($id);
 
         $portfolioCategory->category_name       = $request->category_name;
+        $portfolioCategory->category_icon       = $request->category_icon;
         $portfolioCategory->status              = $request->status;
-
-        if( $request->file('category_icon') ){
-            $category_icon = $request->file('category_icon');
-
-            
-            if( !is_null($portfolioCategory->category_icon) && file_exists($portfolioCategory->category_icon) ){
-                unlink($portfolioCategory->category_icon);
-             }
-
-            $imageName          = microtime('.') . '.' . $category_icon->getClientOriginalExtension();
-            $imagePath          = 'public/backend/image/testimonial/';
-            $category_icon->move($imagePath, $imageName);
-
-            $portfolioCategory->category_icon   = $imagePath . $imageName;
-        }
 
         $portfolioCategory->save();
 

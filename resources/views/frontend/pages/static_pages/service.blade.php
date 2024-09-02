@@ -38,7 +38,7 @@
     <!-- Breadcrumb section end -->
 
 
-    <!-- Service section start -->
+    {{-- <!-- Service section start -->
         <div class="service_section">
             <div class="container">
                 <div class="row">
@@ -165,11 +165,11 @@
             </div>
         </div>
     </section>
-    <!-- Technology section end -->
+    <!-- Technology section end --> --}}
 
 
     <!-- Testimonial section start -->
-        <section class="testimonial_section">
+        <section class="testimonial_section" style="margin-top: 40px;">
             <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -248,6 +248,34 @@
             </div>
         </section>
     <!-- Testimonial section end -->
+
+
+    <!-- Video section start -->
+    <section class="video_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="video-setup">
+                        <h1>Our Most Recent Data Analytics Strategy Story</h1>
+                        <div class="video-play">
+                            <button class="video_btn">
+                                <i class='bx bxs-right-arrow'></i>
+                            </button>
+                        </div>
+
+                        <div class="popup_video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/jYuAmonOUvU?si=Y0T-s84MplUoObyO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                            <div class="video_close">
+                                <i class='bx bx-x'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Video section end -->
 
 @endsection
 

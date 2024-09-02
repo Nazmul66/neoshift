@@ -46,6 +46,7 @@ class BasicInfoController extends Controller
         $basicInfo->instagram            = $request->instagram;
         $basicInfo->pinterest            = $request->pinterest;
         $basicInfo->google_map           = $request->google_map;
+        $basicInfo->calendly_api         = $request->calendly_api;
         $basicInfo->footer_text          = $request->footer_text;
 
         if( $request->file('logo') ){
@@ -69,7 +70,7 @@ class BasicInfoController extends Controller
         }
 
         if( $request->file('favicon') ){
-            $favicon = $request->file('favicon');  
+            $favicon = $request->file('favicon');
 
             $imageName          = microtime('.') . '.' . $favicon->getClientOriginalExtension();
             $imagePath          = 'public/backend/image/basicInfo/';
@@ -93,7 +94,7 @@ class BasicInfoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        
+
         $basicInfo = BasicInfo::first();
 
         $basicInfo->whatsapp             = $request->whatsapp;
@@ -115,6 +116,7 @@ class BasicInfoController extends Controller
         $basicInfo->instagram            = $request->instagram;
         $basicInfo->pinterest            = $request->pinterest;
         $basicInfo->google_map           = $request->google_map;
+        $basicInfo->calendly_api         = $request->calendly_api;
         $basicInfo->footer_text          = $request->footer_text;
 
 
@@ -147,7 +149,7 @@ class BasicInfoController extends Controller
         }
 
         if( $request->file('favicon') ){
-            $favicon = $request->file('favicon');  
+            $favicon = $request->file('favicon');
 
             if( !is_null($basicInfo->favicon) && file_exists($basicInfo->favicon) ){
                 unlink($basicInfo->favicon);

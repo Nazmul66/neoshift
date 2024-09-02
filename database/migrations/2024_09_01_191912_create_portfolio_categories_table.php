@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('portfolio_categories', function (Blueprint $table) {
             $table->id();
             $table->string('category_name');
-            $table->string('category_icon');
+            $table->text('category_icon')->nullable();
             $table->integer('status')->default(1)->comment('1=active, 0=inactive');
             $table->timestamps();
         });

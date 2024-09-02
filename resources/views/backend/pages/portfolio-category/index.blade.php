@@ -63,7 +63,8 @@
 
                         <div class="col mb-3">
                             <label for="category_icon" class="form-label">Category Icon</label>
-                            <input class="form-control" type="file" name="category_icon" id="category_icon">
+                            {{-- <input class="form-control" type="file" name="category_icon" id="category_icon"> --}}
+                            <input type="text" id="category_icon" name="category_icon" class="form-control" placeholder="Category Icon......">
                         </div>
 
                         <div class="col mb-3">
@@ -110,9 +111,9 @@
 
                     <div class="col mb-3">
                         <label for="up_category_icon" class="form-label">Category Icon</label>
-                        <input class="form-control" type="file" name="category_icon" id="up_category_icon">
-
-                        <div id="imageShow"></div>
+                        {{-- <input class="form-control" type="file" name="category_icon" id="up_category_icon"> --}}
+                        <input type="text" id="up_category_icon" name="category_icon" class="form-control" placeholder="Category Icon......">
+                        {{-- <div id="imageShow"></div> --}}
                     </div>
 
                     <div class="col mb-3">
@@ -280,10 +281,11 @@
 
                     $('#up_id').val(data.id);
                     $('#up_category_name').val(data.category_name);
-                    $('#imageShow').html('');
-                    $('#imageShow').append(`
-                        <img src={{ asset("`+ data.category_icon +`") }} alt="" style="width: 75px;">
-                    `);
+                    $('#up_category_icon').val(data.category_icon);
+                    // $('#imageShow').html('');
+                    // $('#imageShow').append(`
+                    //     <img src={{ asset("`+ data.category_icon +`") }} alt="" style="width: 75px;">
+                    // `);
                     $('#up_status').val(data.status);
                 },
                 error: function (error) {

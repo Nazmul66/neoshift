@@ -152,7 +152,7 @@ header{
 .contact_bio_container{
     max-width: 1140px;
     width: 100%;
-    margin: 0 auto;  
+    margin: 0 auto;
 }
 .contact_bio_container ul{
     margin: 0;
@@ -275,7 +275,7 @@ nav .responsive_header_img img{
     }
     .contact_bio_container ul li .contact_list span {
         font-size: 12px;
-    }    
+    }
     .main_container {
         padding: 14px 20px;
     }
@@ -459,21 +459,21 @@ nav .responsive_header_img img{
     padding: 12px 30px;
     margin-bottom: 20px;
 }
-.banner_content h1{
+.banner_content h2{
     font-size: 48px;
     font-weight: 700;
     line-height: 61px;
     color: #000;
     margin-bottom: 12px;
 }
+.banner_content h2 strong{
+    color: #026CFF;
+}
 .banner_content p{
     font-size: 16px;
     color: #666;
     line-height: 30px;
     margin-bottom: 28px;
-}
-.banner_content h1 span{
-    color: #026CFF;
 }
 .banner_action{
     position: relative;
@@ -562,7 +562,7 @@ nav .responsive_header_img img{
         padding: 10px 22px;
         margin-bottom: 20px;
     }
-    .banner_content h1 {
+    .banner_content h2 {
         font-size: 36px;
         line-height: 42px;
         margin-bottom: 20px;
@@ -619,7 +619,7 @@ nav .responsive_header_img img{
         padding: 14px 30px;
         margin-bottom: 20px;
     }
-    .banner_content h1 {
+    .banner_content h2 {
         font-size: 42px;
         line-height: 52px;
         margin-bottom: 20px;
@@ -676,7 +676,7 @@ nav .responsive_header_img img{
         padding: 14px 30px;
         margin-bottom: 20px;
     }
-    .banner_content h1 {
+    .banner_content h2 {
         font-size: 42px;
         line-height: 52px;
         margin-bottom: 20px;

@@ -18,7 +18,7 @@
                 <div class="col-lg-6">
                    <div class="banner_content">
                        <h5>Data Analysis Agency</h5>
-                       <h1><span>Data Science</span> & Data Analysis Agency</h1>
+                       <h2><strong>Data Science</strong> & Data Analysis Agency</h2>
                        <p>Holisticly procrastinate mission-critical convergence with reliable customer service. Assertively underwhelm idea-sharing for impactful solutions.</p>
 
                        <div class="banner_action">

@@ -318,10 +318,12 @@
                     // console.log(data)
 
                     $('#up_id').val(data.id);
-                    $('#up_category_name').val(data.category_name);
+                    $('#up_category_id').val(data.category_id);
+                    $('#up_portfolio_name').val(data.portfolio_name);
+                    $('#up_portfolio_url').val(data.portfolio_url);
                     $('#imageShow').html('');
                     $('#imageShow').append(`
-                        <img src={{ asset("`+ data.category_icon +`") }} alt="" style="width: 75px;">
+                        <img src={{ asset("`+ data.portfolio_image +`") }} alt="" style="width: 75px;">
                     `);
                     $('#up_status').val(data.status);
                 },
