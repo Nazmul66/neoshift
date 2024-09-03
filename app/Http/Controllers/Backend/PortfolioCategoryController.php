@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\PortfolioCategory;
+use App\Models\PortfolioManage;
 use Yajra\DataTables\DataTables;
 
 class PortfolioCategoryController extends Controller
@@ -21,7 +22,7 @@ class PortfolioCategoryController extends Controller
 
         return DataTables::of($portfolioCategories)
              ->addIndexColumn()
-             ->addColumn('icon', function ($portfolioCategory) {
+             ->addColumn('category_icon', function ($portfolioCategory) {
                 return '<span class="badge bg-success">'. $portfolioCategory->category_icon .'</span>';
              })
              ->addColumn('status', function ($portfolioCategory) {
@@ -42,7 +43,7 @@ class PortfolioCategoryController extends Controller
                     </button>
                 </div>';
             })
-            ->rawColumns(['icon', 'status', 'action'])
+            ->rawColumns(['category_icon', 'status', 'action'])
             ->make(true);
     }
 
@@ -117,7 +118,7 @@ class PortfolioCategoryController extends Controller
     public function destroy(string $id)
     {
         $portfolioCategory = PortfolioCategory::find($id);
-
+        
         if ( !is_null($portfolioCategory->category_icon) ) {
             if (file_exists($portfolioCategory->category_icon)) {
                 unlink($portfolioCategory->category_icon);
@@ -125,7 +126,14 @@ class PortfolioCategoryController extends Controller
         }
 
         $portfolioCategory->delete();
-
+        
         return response()->json(['message' => 'Portfolio Category has been deleted.'], 200);
+    }
+    public function tabData(string $id)
+    {
+      // dd($id);
+       $portfolioManages = PortfolioManage::where('category_id', $id)->get();
+
+       return response()->json(['status' => true, "data" => $portfolioManages], 200);
     }
 }

@@ -6,18 +6,18 @@
                     <div class="widget-1">
                         <a class="navbar_brand" href="{{ route('home') }}">
                             <img src="{{ asset('public/frontend/assets/images/footer-logo.png') }}" alt="">
-                            <h3>Shariar Ridth</h3>
+                            <h3>{{ $settings->first_name }} {{ $settings->last_name }}</h3>
                         </a>
-                        <p> Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas bibendum.</p>
+                        <p>{{ $settings->address }}</p>
 
                         <ul class="contact_info">
                             <li>
                                 <i class='bx bxs-phone'></i>
-                                <span>(303) 555-0105</span>
+                                <a href="tel: {{ $settings->phone }}">{{ $settings->phone }}</a>
                             </li>
                             <li>
                                 <i class='bx bxs-envelope'></i>
-                                <span>kenzi.lawson@example.com</span>
+                                <a href="mailto: {{ $settings->email }}">{{ $settings->email }}</a>
                             </li>
                         </ul>
                     </div>
@@ -101,22 +101,22 @@
 
                         <ul class="social_links">
                             <li>
-                                <a href="">
+                                <a href="{{ $settings->facebook }}">
                                     <i class="fa-brands fa-facebook-f"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{{ $settings->twitter }}">
                                     <i class="fa-brands fa-x-twitter"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{{ $settings->instagram }}">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="">
+                                <a href="{{ $settings->linkedin }}">
                                     <i class="fa-brands fa-linkedin-in"></i>
                                 </a>
                             </li>
@@ -126,7 +126,7 @@
 
                 <div class="col-lg-12">
                     <div class="footer_copyright">
-                        <p>Copyright@ 2024 All Rights Reserved.</p>
+                        <p>{{ $settings->footer_text }}</p>
                     </div>
                 </div>
             </div>

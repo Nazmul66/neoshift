@@ -165,7 +165,7 @@
                     searchable: false
                 },
                 {
-                    data: 'icon'
+                    data: 'category_icon'
                 },
                 {
                     data: 'category_name'

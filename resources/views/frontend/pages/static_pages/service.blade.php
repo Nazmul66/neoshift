@@ -21,7 +21,7 @@
                             <h1>Services</h1>
                             <ul class="breadcrumb_list">
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="{{ url('/') }}">Home</a>
                                 </li>
                                 <li>
                                     <a type="button">/</a>
@@ -169,85 +169,59 @@
 
 
     <!-- Testimonial section start -->
-        <section class="testimonial_section" style="margin-top: 40px;">
-            <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="testimonial_title">
-                                <h5>Testimonials</h5>
-                                <h2>What Client Says</h2>
-                            </div>
-                        </div>
+    <section class="testimonial_section" style="margin-top: 80px;">
+        <div class="container">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="testimonial_title">
+                          <h5>Testimonials</h5>
+                          <h2>What Client Says</h2>
+                      </div>
+                  </div>
 
-                        <div class="owl-carousel owl-theme" id="testimonialSlider">
-                            <div class="testimonial_content">
-                                <div class="testimonial_description">
-                                    <p>Sed vehicula vulputate lectus et molestie. Praesent sed erat vel lorem volutpat tempus tempus non dolor. Suspendisse ullamcorper finibus neque.</p>
-                                    <div class="testimonial_ratings">
+                  <div class="owl-carousel owl-theme" id="testimonialSlider">
+
+                      @foreach ($testimonials as $row)
+                          <div class="testimonial_content">
+                              <div class="testimonial_description">
+                                  <p>{{ $row->description }}</p>
+                                  <div class="testimonial_ratings">
+                                      @if ( $row->review_ratings == 3 )
+                                        <i class='bx bxs-star' ></i>
+                                        <i class='bx bxs-star' ></i>
+                                        <i class='bx bxs-star' ></i>
+                                        <i class='bx bx-star' ></i>
+                                        <i class='bx bx-star' ></i>
+                                      @elseif ( $row->review_ratings == 4 )
                                         <i class='bx bxs-star' ></i>
                                         <i class='bx bxs-star' ></i>
                                         <i class='bx bxs-star' ></i>
                                         <i class='bx bxs-star' ></i>
                                         <i class='bx bx-star' ></i>
-                                    </div>
-                                </div>
+                                      @elseif ( $row->review_ratings == 5 )
+                                        <i class='bx bxs-star' ></i>
+                                        <i class='bx bxs-star' ></i>
+                                        <i class='bx bxs-star' ></i>
+                                        <i class='bx bxs-star' ></i>
+                                        <i class='bx bxs-star' ></i>
+                                      @endif
+                                  </div>
+                              </div>
 
-                                <div class="testimonial_user_content">
-                                    <img src="{{ asset('public/frontend/assets/images/review-3.png') }}" alt="">
-                                    <div class="testimonial_user_title">
-                                        <h3>Courtney Henry</h3>
-                                        <p>Nursing Assistant</p>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="testimonial_content">
-                                <div class="testimonial_description">
-                                    <p>Sed vehicula vulputate lectus et molestie. Praesent sed erat vel lorem volutpat tempus tempus non dolor. Suspendisse ullamcorper finibus neque.</p>
-                                    <div class="testimonial_ratings">
-                                        <i class='bx bxs-star' ></i>
-                                        <i class='bx bxs-star' ></i>
-                                        <i class='bx bxs-star' ></i>
-                                        <i class='bx bxs-star' ></i>
-                                        <i class='bx bx-star' ></i>
-                                    </div>
-                                </div>
-
-                                <div class="testimonial_user_content">
-                                    <img src="{{ asset('public/frontend/assets/images/review-1.png') }}" alt="">
-                                    <div class="testimonial_user_title">
-                                        <h3>Courtney Henry</h3>
-                                        <p>Nursing Assistant</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="testimonial_content">
-                                <div class="testimonial_description">
-                                    <p>Sed vehicula vulputate lectus et molestie. Praesent sed erat vel lorem volutpat tempus tempus non dolor. Suspendisse ullamcorper finibus neque.</p>
-                                    <div class="testimonial_ratings">
-                                        <i class='bx bxs-star' ></i>
-                                        <i class='bx bxs-star' ></i>
-                                        <i class='bx bxs-star' ></i>
-                                        <i class='bx bxs-star' ></i>
-                                        <i class='bx bx-star' ></i>
-                                    </div>
-                                </div>
-
-                                <div class="testimonial_user_content">
-                                    <img src="{{ asset('public/frontend/assets/images/review-2.png') }}" alt="">
-                                    <div class="testimonial_user_title">
-                                        <h3>Courtney Henry</h3>
-                                        <p>Nursing Assistant</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
+                              <div class="testimonial_user_content">
+                                  <img src="{{ asset( $row->image ) }}" alt="">
+                                  <div class="testimonial_user_title">
+                                      <h3>{{ $row->name }}</h3>
+                                      <p>{{ $row->position }}</p>
+                                  </div>
+                              </div>
+                          </div>
+                      @endforeach
+                  </div>
             </div>
-        </section>
-    <!-- Testimonial section end -->
+        </div>
+     </section>
+  <!-- Testimonial section end -->
 
 
     <!-- Video section start -->
@@ -256,7 +230,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="video-setup">
-                        <h1>Our Most Recent Data Analytics Strategy Story</h1>
+                        <h1>{{ $counter->main_title }}</h1>
                         <div class="video-play">
                             <button class="video_btn">
                                 <i class='bx bxs-right-arrow'></i>
@@ -264,7 +238,7 @@
                         </div>
 
                         <div class="popup_video">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/jYuAmonOUvU?si=Y0T-s84MplUoObyO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            {!! $counter->youtube_video !!}
 
                             <div class="video_close">
                                 <i class='bx bx-x'></i>
@@ -275,7 +249,7 @@
             </div>
         </div>
     </section>
-    <!-- Video section end -->
+   <!-- Video section end -->
 
 @endsection
 

@@ -1226,16 +1226,16 @@ nav .responsive_header_img img{
 }
 
 .portfolio_container{
-   display: none;
+   display: grid;
    grid-template-columns: repeat(3, 1fr);
    gap: 15px;
-   opacity: 0;
+   opacity: 1;
    transition: opacity 0.5s ease-in-out;
 }
-.portfolio_container.active_portfolio{
+/* .portfolio_container.active_portfolio{
    display: grid;
    opacity: 1;
-}
+} */
 .portfolio_showcase{
     margin-bottom: 3rem;
 }
@@ -2997,7 +2997,7 @@ footer {
     border: 1px solid #FFF;
     border-radius: 50px;
 }
-.widget-1 .contact_info li span{
+.widget-1 .contact_info li a{
     color: #FFF;
     line-height: 20px;
     margin-left: 20px;

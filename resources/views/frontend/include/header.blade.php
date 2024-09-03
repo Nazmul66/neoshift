@@ -3,15 +3,15 @@
         <div class="contact_bio_container">
             <ul>
                 <li>
-                    <a href="tel:+8801930260802" class="contact_list">
+                    <a href="tel:{{ $settings->phone }}" class="contact_list">
                         <i class='bx bxs-phone-call' ></i>
-                        <span>+8801930260802</span>
+                        <span>{{ $settings->phone }}</span>
                     </a>
                 </li>
                 <li>
-                    <a href="mailto:hnazmul748@gmail.com" class="contact_list">
+                    <a href="mailto:{{ $settings->email }}" class="contact_list">
                         <i class='bx bxs-envelope' ></i>
-                        <span>hnazmul748@gmail.com</span>
+                        <span>{{ $settings->email }}</span>
                     </a>
                 </li>
             </ul>
@@ -22,7 +22,7 @@
         <nav>
             <div class="header_img">
                 <img src="{{ asset('public/frontend/assets/images/header-logo.png') }}" alt="">
-                <h3>Shariar <span>Ridth</span></h3>
+                <h3>{{ $settings->first_name }} <span>{{ $settings->last_name }}</span></h3>
             </div>
 
             <div class="nav_menu">

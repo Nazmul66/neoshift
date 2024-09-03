@@ -20,7 +20,7 @@
                             <h1>Contact-Us</h1>
                             <ul class="breadcrumb_list">
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="{{ url('/') }}">Home</a>
                                 </li>
                                 <li>
                                     <a type="button">/</a>

@@ -17,12 +17,12 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                    <div class="banner_content">
-                       <h5>Data Analysis Agency</h5>
-                       <h2><strong>Data Science</strong> & Data Analysis Agency</h2>
-                       <p>Holisticly procrastinate mission-critical convergence with reliable customer service. Assertively underwhelm idea-sharing for impactful solutions.</p>
+                       <h5>{{ $banner->title }}</h5>
+                       {!! $banner->main_title !!}
+                       <p>{{ $banner->description }}</p>
 
                        <div class="banner_action">
-                            <a href="">Learn More</a>
+                            <a href="{{ $banner->url }}">Learn More</a>
 
                             <div class="banner_watch_video">
                                 <i class="bx bxs-right-arrow"></i>
@@ -31,7 +31,7 @@
 
                              <!-- PopUp Video -->
                             <div class="banner_popup_video">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/jYuAmonOUvU?si=Y0T-s84MplUoObyO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                {!! $banner->youtube_video !!}
 
                                 <div class="banner_video_close">
                                     <i class='bx bx-x'></i>
@@ -43,7 +43,7 @@
 
                 <div class="col-lg-6">
                     <div class="banner_img">
-                        <img src="{{ asset('public/frontend/assets/images/banner-img.png') }}" alt="">
+                        <img src="{{ $banner->image }}" alt="">
                     </div>
                 </div>
             </div>
@@ -274,7 +274,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="video-setup">
-                        <h1>Our Most Recent Data Analytics Strategy Story</h1>
+                        <h1>{{ $counter->main_title }}</h1>
                         <div class="video-play">
                             <button class="video_btn">
                                 <i class='bx bxs-right-arrow'></i>
@@ -282,7 +282,7 @@
                         </div>
 
                         <div class="popup_video">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/jYuAmonOUvU?si=Y0T-s84MplUoObyO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            {!! $counter->youtube_video !!}
 
                             <div class="video_close">
                                 <i class='bx bx-x'></i>
@@ -302,23 +302,23 @@
           <div class="row">
               <div class="counter_contents">
                   <div class="counter_title">
-                      <h1>500</h1>
-                      <p>+ Project Done</p>
+                      <h1>{{ $counter->project_count }}</h1>
+                      <p>+ {{ $counter->project_title }}</p>
                   </div>
 
                   <div class="counter_title">
-                    <h1>150</h1>
-                    <p>+ Cup Of Tea</p>
+                    <h1>{{ $counter->option_count }}</h1>
+                    <p>+ {{ $counter->option_title }}</p>
                   </div>
 
                    <div class="counter_title">
-                       <h1>120</h1>
-                       <p>+ Total Employee</p>
+                       <h1>{{ $counter->employee_count }}</h1>
+                       <p>+ {{ $counter->employee_title }}</p>
                    </div>
 
                    <div class="counter_title">
-                       <h1>50</h1>
-                       <p>+ Win Awards</p>
+                       <h1>{{ $counter->award_count }}</h1>
+                       <p>+ {{ $counter->award_title }}</p>
                    </div>
               </div>
           </div>
@@ -341,98 +341,21 @@
                 <div class="col-lg-12">
                     <div class="portfolio_menu">
                         <ul>
-                            <li class="menu_listing active_portfolio"><i class='bx bx-store-alt'></i> E-commerce</li>
-                            <li class="menu_listing"><i class='bx bxs-business'></i> Real-Estate</li>
-                            <li class="menu_listing"><i class='bx bxs-bar-chart-alt-2'></i> Corporate</li>
-                            <li class="menu_listing"><i class='bx bxs-plane-alt'></i> Travel Agency</li>
+                            @foreach ($portfolioCategories as $row => $item)
+                                <li class="menu_listing {{ $row == 0 ? 'active_portfolio' : '' }}" data-id={{ $item->id }}>
+                                    <i class='{{ $item->category_icon }}'></i> 
+                                    {{ $item->category_name }}
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
 
                     <div class="portfolio_show">
-                        <div class="portfolio_container active_portfolio">
-                            <div class="portfolio_showcase">
-                                <div class="portfolio_image">
-                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
-                                    <div class="portfolio_overlay">
-                                        <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
-                                    </div>
-                                </div>
-
-                                <h3>Tuning into user behaviors with analytics</h3>
-                            </div>
-
-                            <div class="portfolio_showcase">
-                                <div class="portfolio_image">
-                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
-                                    <div class="portfolio_overlay">
-                                        <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
-                                    </div>
-                                </div>
-
-                                <h3>Tuning into user behaviors with analytics</h3>
-                            </div>
-
-                            <div class="portfolio_showcase">
-                                <div class="portfolio_image">
-                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
-                                    <div class="portfolio_overlay">
-                                        <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
-                                    </div>
-                                </div>
-
-                                <h3>Tuning into user behaviors with analytics</h3>
-                            </div>
-                        </div>
-
+                        {{-- Fetch All Data --}}
                         <div class="portfolio_container">
-                            <div class="portfolio_showcase">
-                                <div class="portfolio_image">
-                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
-                                    <div class="portfolio_overlay">
-                                        <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
-                                    </div>
-                                </div>
 
-                                <h3>Tuning into user behaviors with analytics</h3>
-                            </div>
-
-                            <div class="portfolio_showcase">
-                                <div class="portfolio_image">
-                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
-                                    <div class="portfolio_overlay">
-                                        <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
-                                    </div>
-                                </div>
-
-                                <h3>Tuning into user behaviors with analytics</h3>
-                            </div>
                         </div>
 
-                        <div class="portfolio_container">
-                            <div class="portfolio_showcase">
-                                <div class="portfolio_image">
-                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
-                                    <div class="portfolio_overlay">
-                                        <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
-                                    </div>
-                                </div>
-
-                                <h3>Tuning into user behaviors with analytics</h3>
-                            </div>
-                        </div>
-
-                        <div class="portfolio_container">
-                            <div class="portfolio_showcase">
-                                <div class="portfolio_image">
-                                    <img src="{{ asset('public/frontend/assets/images/portfolio-1.png') }}" alt="">
-                                    <div class="portfolio_overlay">
-                                        <a class="portfolio_link" href=""><i class='bx bx-link-alt'></i></a>
-                                    </div>
-                                </div>
-
-                                <h3>Tuning into user behaviors with analytics</h3>
-                            </div>
-                        </div>
                     </div>
                 </div>
 
@@ -549,69 +472,43 @@
                     </div>
 
                     <div class="owl-carousel owl-theme" id="testimonialSlider">
-                        <div class="testimonial_content">
-                            <div class="testimonial_description">
-                                <p>Sed vehicula vulputate lectus et molestie. Praesent sed erat vel lorem volutpat tempus tempus non dolor. Suspendisse ullamcorper finibus neque.</p>
-                                <div class="testimonial_ratings">
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bx-star' ></i>
+
+                        @foreach ($testimonials as $row)
+                            <div class="testimonial_content">
+                                <div class="testimonial_description">
+                                    <p>{{ $row->description }}</p>
+                                    <div class="testimonial_ratings">
+                                        @if ( $row->review_ratings == 3 )
+                                          <i class='bx bxs-star' ></i>
+                                          <i class='bx bxs-star' ></i>
+                                          <i class='bx bxs-star' ></i>
+                                          <i class='bx bx-star' ></i>
+                                          <i class='bx bx-star' ></i>
+                                        @elseif ( $row->review_ratings == 4 )
+                                          <i class='bx bxs-star' ></i>
+                                          <i class='bx bxs-star' ></i>
+                                          <i class='bx bxs-star' ></i>
+                                          <i class='bx bxs-star' ></i>
+                                          <i class='bx bx-star' ></i>
+                                        @elseif ( $row->review_ratings == 5 )
+                                          <i class='bx bxs-star' ></i>
+                                          <i class='bx bxs-star' ></i>
+                                          <i class='bx bxs-star' ></i>
+                                          <i class='bx bxs-star' ></i>
+                                          <i class='bx bxs-star' ></i>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="testimonial_user_content">
+                                    <img src="{{ asset( $row->image ) }}" alt="">
+                                    <div class="testimonial_user_title">
+                                        <h3>{{ $row->name }}</h3>
+                                        <p>{{ $row->position }}</p>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="testimonial_user_content">
-                                <img src="{{ asset('public/frontend/assets/images/review-3.png') }}" alt="">
-                                <div class="testimonial_user_title">
-                                    <h3>Courtney Henry</h3>
-                                    <p>Nursing Assistant</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="testimonial_content">
-                            <div class="testimonial_description">
-                                <p>Sed vehicula vulputate lectus et molestie. Praesent sed erat vel lorem volutpat tempus tempus non dolor. Suspendisse ullamcorper finibus neque.</p>
-                                <div class="testimonial_ratings">
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bx-star' ></i>
-                                </div>
-                            </div>
-
-                            <div class="testimonial_user_content">
-                                <img src="{{ asset('public/frontend/assets/images/review-1.png') }}" alt="">
-                                <div class="testimonial_user_title">
-                                    <h3>Courtney Henry</h3>
-                                    <p>Nursing Assistant</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial_content">
-                            <div class="testimonial_description">
-                                <p>Sed vehicula vulputate lectus et molestie. Praesent sed erat vel lorem volutpat tempus tempus non dolor. Suspendisse ullamcorper finibus neque.</p>
-                                <div class="testimonial_ratings">
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bxs-star' ></i>
-                                    <i class='bx bx-star' ></i>
-                                </div>
-                            </div>
-
-                            <div class="testimonial_user_content">
-                                <img src="{{ asset('public/frontend/assets/images/review-2.png') }}" alt="">
-                                <div class="testimonial_user_title">
-                                    <h3>Courtney Henry</h3>
-                                    <p>Nursing Assistant</p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
               </div>
           </div>
@@ -632,170 +529,42 @@
                     </div>
 
                     <div class="owl-carousel owl-theme" id="teamSlider">
-                        <div class="team_details">
-                            <img src="{{ asset('public/frontend/assets/images/team-1.png') }}" alt="">
 
-                            <div class="team_content">
-                                <h2>Olivia Rhye</h2>
-                                <h5>Founder & CEO</h5>
-                                <p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>
+                        @foreach ($teams as $row)
+                            <div class="team_details">
+                                <img src="{{ asset($row->image) }}" alt="">
 
-                                <ul class="team_social">
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-x-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                </ul>
+                                <div class="team_content">
+                                    <h2>{{ $row->name }}</h2>
+                                    <h5>{{ $row->position }}</h5>
+                                    <p>{{ $row->description	 }}</p>
+
+                                    <ul class="team_social">
+                                        <li>
+                                            <a href="{{ $row->twitter }}">
+                                                <i class="fa-brands fa-x-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ $row->facebook }}">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ $row->instagram }}">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ $row->linkedin }}">
+                                                <i class="fa-brands fa-linkedin-in"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="team_details">
-                            <img src="{{ asset('public/frontend/assets/images/team-2.png') }}" alt="">
-
-                            <div class="team_content">
-                                <h2>Olivia Rhye</h2>
-                                <h5>Founder & CEO</h5>
-                                <p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>
-
-                                <ul class="team_social">
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-x-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="team_details">
-                            <img src="{{ asset('public/frontend/assets/images/team-3.png') }}" alt="">
-
-                            <div class="team_content">
-                                <h2>Olivia Rhye</h2>
-                                <h5>Founder & CEO</h5>
-                                <p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>
-
-                                <ul class="team_social">
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-x-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="team_details">
-                            <img src="{{ asset('public/frontend/assets/images/team-1.png') }}" alt="">
-
-                            <div class="team_content">
-                                <h2>Olivia Rhye</h2>
-                                <h5>Founder & CEO</h5>
-                                <p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>
-
-                                <ul class="team_social">
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-x-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="team_details">
-                            <img src="{{ asset('public/frontend/assets/images/team-2.png') }}" alt="">
-
-                            <div class="team_content">
-                                <h2>Olivia Rhye</h2>
-                                <h5>Founder & CEO</h5>
-                                <p>Former co-founder of Opendoor. Early staff at Spotify and Clearbit.</p>
-
-                                <ul class="team_social">
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-x-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        @endforeach
+                        
                     </div>
                 </div>
             </div>
@@ -837,24 +606,17 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 ">
                         <div class="about_image">
-                            <img src="{{ asset('public/frontend/assets/images/about.png') }}" alt="">
+                            <img src="{{ asset($about->image) }}" alt="">
                         </div>
                     </div>
 
                     <div class="col-lg-6 ">
                         <div class="about_detail">
-                            <h5>About Us</h5>
-                            <h2>Transform your data. Transform your business.</h2>
+                            <h5>{{ $about->title }}</h5>
+                            <h2>{{ $about->main_title }}</h2>
 
                             <div class="about_description_container">
-                                <p>Sed eget pulvinar orci, sit amet vestibulum tellus. Quisque semper sem vel sagittis facilisis. Donec at facilisis risus. Curabitur porttitor ex id blandit vulputate. Donec vulputate eleifend mauris. In commodo elementum turpis, accumsan commodo magn</p>
-
-                                <ul>
-                                    <li>Sed eget pulvinar orci, sit amet vestibulum tellus.</li>
-                                    <li>Sed eget pulvinar orci, sit amet vestibulum tellus.</li>
-                                    <li>Sed eget pulvinar orci, sit amet vestibulum tellus.</li>
-                                    <li>Sed eget pulvinar orci, sit amet vestibulum tellus.</li>
-                                </ul>
+                                {!! $about->description !!}
                             </div>
                         </div>
                     </div>
@@ -876,157 +638,46 @@
                     </div>
 
                     <div class="owl-carousel owl-theme" id="blogSlider">
-                        <div class="blog_details">
-                            <div class="blog_img">
-                                <img src="{{ asset('public/frontend/assets/images/blog-1.png') }}" alt="">
 
-                                <div class="view_stack">
-                                    <div class="view_stack_content">
-                                        <i class='bx bx-message-square-detail' ></i>
-                                        <span>16 June</span>
-                                    </div>
+                        @foreach ($blogs as $row)
+                            <div class="blog_details">
+                                <div class="blog_img">
+                                    <img src="{{ asset($row->image) }}" alt="">
 
-                                    <div class="view_stack_content">
-                                        <i class="fa-solid fa-eye"></i>
-                                        <span>54</span>
-                                    </div>
+                                    <div class="view_stack">
+                                        <div class="view_stack_content">
+                                            <i class='bx bx-message-square-detail' ></i>
+                                            <span>{{ $row->date_time }}</span>
+                                        </div>
 
-                                    <div class="view_stack_content">
-                                        <i class='bx bx-calendar' ></i>
-                                        <span>1.9k</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="blog_content">
-                               <h2>The power product and the quotient rules</h2>
-                               <p>Donec blandit hendrerit erat nec pretium. Pellentesque scelerisque tortor turpis.</p>
-                               <div class="hr"></div>
-
-                               <div class="blog_user_content">
-                                   <img src="{{ asset('public/frontend/assets/images/user-1.png') }}" alt="">
-
-                                   <div class="blog_user_title">
-                                        <h2>antixidant</h2>
-                                        <p>Health & Food</p>
-                                   </div>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="blog_details">
-                            <div class="blog_img">
-                                <img src="{{ asset('public/frontend/assets/images/blog-2.png') }}" alt="">
-
-                                <div class="view_stack">
-                                    <div class="view_stack_content">
-                                        <i class='bx bx-message-square-detail' ></i>
-                                        <span>16 June</span>
-                                    </div>
-
-                                    <div class="view_stack_content">
-                                        <i class="fa-solid fa-eye"></i>
-                                        <span>54</span>
-                                    </div>
-
-                                    <div class="view_stack_content">
-                                        <i class='bx bx-calendar' ></i>
-                                        <span>1.9k</span>
+                                        <div class="view_stack_content">
+                                            <i class="fa-solid fa-eye"></i>
+                                            <span>{{ $row->view }}</span>
+                                        </div>
+                                        {{--  <div class="view_stack_content">
+                                            <i class='bx bx-calendar' ></i>
+                                            <span>1.9k</span>
+                                        </div> --}}
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="blog_content">
-                               <h2>The power product and the quotient rules</h2>
-                               <p>Donec blandit hendrerit erat nec pretium. Pellentesque scelerisque tortor turpis.</p>
-                               <div class="hr"></div>
+                                <div class="blog_content">
+                                <h2>{{ $row->title }}</h2>
+                                <p>{{ $row->description }}</p>
+                                {{-- <div class="hr"></div>
 
-                               <div class="blog_user_content">
-                                   <img src="{{ asset('public/frontend/assets/images/user-2.png') }}" alt="">
+                                <div class="blog_user_content">
+                                    <img src="{{ asset('public/frontend/assets/images/user-1.png') }}" alt="">
 
-                                   <div class="blog_user_title">
-                                        <h2>antixidant</h2>
-                                        <p>Health & Food</p>
-                                   </div>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="blog_details">
-                            <div class="blog_img">
-                                <img src="{{ asset('public/frontend/assets/images/blog-3.png') }}" alt="">
-
-                                <div class="view_stack">
-                                    <div class="view_stack_content">
-                                        <i class='bx bx-message-square-detail' ></i>
-                                        <span>16 June</span>
+                                    <div class="blog_user_title">
+                                            <h2>antixidant</h2>
+                                            <p>Health & Food</p>
                                     </div>
-
-                                    <div class="view_stack_content">
-                                        <i class="fa-solid fa-eye"></i>
-                                        <span>54</span>
-                                    </div>
-
-                                    <div class="view_stack_content">
-                                        <i class='bx bx-calendar' ></i>
-                                        <span>1.9k</span>
-                                    </div>
+                                </div> --}}
                                 </div>
                             </div>
+                        @endforeach
 
-                            <div class="blog_content">
-                               <h2>The power product and the quotient rules</h2>
-                               <p>Donec blandit hendrerit erat nec pretium. Pellentesque scelerisque tortor turpis.</p>
-                               <div class="hr"></div>
-
-                               <div class="blog_user_content">
-                                   <img src="{{ asset('public/frontend/assets/images/user-3.png') }}" alt="">
-
-                                   <div class="blog_user_title">
-                                        <h2>antixidant</h2>
-                                        <p>Health & Food</p>
-                                   </div>
-                               </div>
-                            </div>
-                        </div>
-
-                        <div class="blog_details">
-                            <div class="blog_img">
-                                <img src="{{ asset('public/frontend/assets/images/blog-1.png') }}" alt="">
-
-                                <div class="view_stack">
-                                    <div class="view_stack_content">
-                                        <i class='bx bx-message-square-detail' ></i>
-                                        <span>16 June</span>
-                                    </div>
-
-                                    <div class="view_stack_content">
-                                        <i class="fa-solid fa-eye"></i>
-                                        <span>54</span>
-                                    </div>
-
-                                    <div class="view_stack_content">
-                                        <i class='bx bx-calendar' ></i>
-                                        <span>1.9k</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="blog_content">
-                               <h2>The power product and the quotient rules</h2>
-                               <p>Donec blandit hendrerit erat nec pretium. Pellentesque scelerisque tortor turpis.</p>
-                               <div class="hr"></div>
-
-                               <div class="blog_user_content">
-                                   <img src="{{ asset('public/frontend/assets/images/user-1.png') }}" alt="">
-
-                                   <div class="blog_user_title">
-                                        <h2>antixidant</h2>
-                                        <p>Health & Food</p>
-                                   </div>
-                               </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1038,14 +689,72 @@
 
 @push('add-js')
 
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
 <script>
-    flatpickr("#datetimepicker", {
-        enableTime: true,
-        dateFormat: "Y-m-d H:i",
-        // minDate: "today",
-        // maxDate: new Date().fp_incr(14)
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabs = document.querySelectorAll('.menu_listing');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                tabs.forEach(tab => tab.classList.remove('active_portfolio'));
+                
+                this.classList.add('active_portfolio');
+                fetchData($(this).attr('data-id')); // Fetch data when tab is clicked
+            });
+        });
+
+        // Function to fetch and display data based on the provided ID
+        function fetchData(id) {
+            $.ajax({
+                type: "GET",
+                url: "{{ url('admin/portfolioCat-tabData') }}/" + id,
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                success: function (res) {
+                    console.log(res.data);
+
+                    let portfolioContainer = $('.portfolio_container');
+                    
+                    if (res.data.length > 0) {
+                        portfolioContainer.empty(); // Clear existing content
+
+                        res.data.forEach(function(item) {
+                            let imageUrl = "{{ asset('') }}/" + item.portfolio_image;
+
+                            // Create HTML structure for each portfolio item
+                            let portfolioItem = `
+                                <div class="portfolio_showcase">
+                                    <div class="portfolio_image">
+                                        <img src="${imageUrl}" alt="">
+                                        <div class="portfolio_overlay">
+                                            <a class="portfolio_link" href="${item.portfolio_url}"><i class='bx bx-link-alt'></i></a>
+                                        </div>
+                                    </div>
+                                    <h3>${item.portfolio_name}</h3>
+                                </div>
+                            `;
+                            portfolioContainer.append(portfolioItem); // Append to the container
+                        });
+                    } else {
+                        portfolioContainer.empty(); // Clear existing content
+                        portfolioContainer.append(`
+                            <div class="alert alert-info" role="alert">
+                                 There is no data here
+                            </div>
+                        `);
+                    }
+                },
+                error: function (err) {
+                    console.log('error');
+                }
+            });
+        }
+
+        // Call fetchData with default ID or the ID of the first tab when the page loads
+        let defaultTab = document.querySelector('.menu_listing.active_portfolio');
+        let defaultId = defaultTab ? $(defaultTab).attr('data-id') : 'default-id'; // Replace 'default-id' with the actual default ID if needed
+        fetchData(defaultId);
     });
 </script>
+
 @endpush

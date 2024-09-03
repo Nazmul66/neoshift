@@ -81,7 +81,7 @@
                                 <select class="form-select" id="status" name="status">
                                     <option selected="" disabled value="">Open this select menu</option>
                                     <option value="1">Active</option>
-                                    <option value="2">Deactive</option>
+                                    <option value="0">Deactive</option>
                                 </select>
                             </div>
                         </div>
@@ -169,7 +169,7 @@
                             <select class="form-select" id="up_status" name="status">
                                 <option selected="" disabled value="">Open this select menu</option>
                                 <option value="1">Active</option>
-                                <option value="2">Deactive</option>
+                                <option value="0">Deactive</option>
                             </select>
                         </div>
                     </div>

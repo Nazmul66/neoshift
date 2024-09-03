@@ -20,7 +20,7 @@
                             <h1>Schedule Meeting</h1>
                             <ul class="breadcrumb_list">
                                 <li>
-                                    <a href="index.html">Home</a>
+                                    <a href="{{ url('/') }}">Home</a>
                                 </li>
                                 <li>
                                     <a type="button">/</a>
@@ -41,7 +41,7 @@
     <section class="schedule_section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-5 order-2 order-sm-2 order-md-2 order-lg-1">
+                {{-- <div class="col-lg-5 order-2 order-sm-2 order-md-2 order-lg-1">
                   <div class="schedual_meeting_img">
                      <img src="{{ asset('public/frontend/assets/images/schedule_meeting.png') }}" alt="">
                   </div>
@@ -90,7 +90,9 @@
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> --}}
+
+                {!! $settings->calendly_api !!}
             </div>
         </div>
       </section>

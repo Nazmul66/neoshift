@@ -17,6 +17,7 @@ Route::group(["prefix" => "admin"], function(){
     
     //____ Portfolio Category ____//
     Route::resource('portfolio-category', PortfolioCategoryController::class)->names('admin.portfolio-category');
+    Route::get('/portfolioCat-tabData/{id}',[PortfolioCategoryController::class,'tabData'])->name('admin.tabData-portfolio-category');
     Route::get('/get-portfolio-category',[PortfolioCategoryController::class,'getData'])->name('admin.get-portfolio-category');
     Route::post('/portfolio-category/status',[PortfolioCategoryController::class,'adminPortfolioCategoryStatus'])->name('admin.portfolio-category.status');
 
