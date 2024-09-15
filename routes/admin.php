@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\BasicInfoController;
 use App\Http\Controllers\Backend\BlogController;
@@ -13,7 +14,10 @@ use App\Http\Controllers\Backend\PortfolioManageController;
 use App\Http\Controllers\Backend\InformationController;
 
 
-Route::group(["prefix" => "admin"], function(){
+Route::get('/admin/login',[AdminController::class,'login'])->name('admin.login');
+
+
+Route::group(["prefix" => "admin", 'middleware' => ['auth', 'IsAdmin']], function(){
     Route::view('/dashboard', "backend.pages.dashboard")->name('dashboard');
 
     //____ Portfolio Category ____//
