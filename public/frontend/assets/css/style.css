@@ -1225,6 +1225,7 @@ nav .responsive_header_img img{
     background-color: rgba(2, 108, 255, 0.18);
 }
 
+
 .portfolio_container{
    display: grid;
    grid-template-columns: repeat(3, 1fr);
@@ -1236,6 +1237,16 @@ nav .responsive_header_img img{
    display: grid;
    opacity: 1;
 } */
+.show_more_portfolio{
+   text-align: end;
+}
+.show_more_portfolio a{
+    background: #026CFF;
+    color: #FFF;
+    padding: 14px 34px;
+    border-radius: 8px;
+    font-weight: 700;
+}
 .portfolio_showcase{
     margin-bottom: 3rem;
 }

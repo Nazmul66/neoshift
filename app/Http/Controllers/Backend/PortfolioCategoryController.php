@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\PortfolioCategory;
-use App\Models\PortfolioManage;
 use Yajra\DataTables\DataTables;
 
 class PortfolioCategoryController extends Controller
@@ -129,11 +128,5 @@ class PortfolioCategoryController extends Controller
         
         return response()->json(['message' => 'Portfolio Category has been deleted.'], 200);
     }
-    public function tabData(string $id)
-    {
-      // dd($id);
-       $portfolioManages = PortfolioManage::where('category_id', $id)->get();
 
-       return response()->json(['status' => true, "data" => $portfolioManages], 200);
-    }
 }

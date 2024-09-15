@@ -2,7 +2,6 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Frontend\WebViewController;
-use App\Http\Controllers\Frontend\InformationController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Stevebauman\Location\Facades\Location;
@@ -17,18 +16,25 @@ Route::get('/browser', function(Request $request){
      print_r($position);
 });
 
+
 //__ All Pages __//
+Route::controller(WebViewController::class)->group(function () {
+     Route::get('/', "home")->name('home');
+     Route::get('/about', "about")->name('about');
+     Route::get('/blog', "blog")->name('blog');
+     // Route::get('/contact', "frontend.pages.static_pages.contact")->name('contact');
+     Route::get('/faq', "faq")->name('faq');
+     Route::get('/schedule-meeting', "schedule_meeting")->name('schedule-meeting');
+     Route::get('/service', "service")->name('service');
+     Route::post('/contact-information', "info_store")->name('info_store');
+     
+     Route::get('/portfolio', "portfolio")->name('portfolio');
+     Route::get('/portfolio-category-home/{id}','home_tabData');
+     Route::get('/portfolio-category-all/{id}','all_tabData');
+});
 
-Route::view('/', "frontend.pages.index")->name('home');
-Route::view('/about', "frontend.pages.static_pages.about-us")->name('about');
-Route::view('/blog', "frontend.pages.static_pages.blog")->name('blog');
-// Route::view('/contact', "frontend.pages.static_pages.contact")->name('contact');
-Route::view('/faq', "frontend.pages.static_pages.faq")->name('faq');
-Route::view('/schedule-meeting', "frontend.pages.static_pages.schedule-meeting")->name('schedule-meeting');
-Route::view('/portfolio', "frontend.pages.static_pages.portfolio")->name('portfolio');
-Route::view('/service', "frontend.pages.static_pages.service")->name('service');
 
-Route::post('/contact-information', [InformationController::class, "info_store"])->name('info_store');
+
 
 
 

@@ -96,17 +96,19 @@
 
         // Function to fetch and display data based on the provided ID
         function fetchData(id) {
+            // console.log(id);
+
             $.ajax({
                 type: "GET",
-                url: "{{ url('admin/portfolioCat-tabData') }}/" + id,
+                url: "{{ url('portfolio-category-all') }}/" + id,
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
                 success: function (res) {
-                    console.log(res.data);
+                    // console.log(res.data);
 
                     let portfolioContainer = $('.portfolio_container');
-                    
+
                     if (res.data.length > 0) {
                         portfolioContainer.empty(); // Clear existing content
 

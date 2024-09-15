@@ -356,6 +356,10 @@
 
                         </div>
 
+                        <div class="show_more_portfolio">
+                            <a class="d-none redirect_link">See More</a>
+                        </div>
+
                     </div>
                 </div>
 
@@ -706,18 +710,20 @@
         function fetchData(id) {
             $.ajax({
                 type: "GET",
-                url: "{{ url('admin/portfolioCat-tabData') }}/" + id,
+                url: "{{ url('portfolio-category-home') }}/" + id,
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
                 success: function (res) {
-                    console.log(res.data);
-
+                    let portfolio_show = $('.portfolio_show');
                     let portfolioContainer = $('.portfolio_container');
 
                     if (res.data.length > 0) {
-                        portfolioContainer.empty(); // Clear existing content
 
+                        portfolioContainer.empty(); // Clear existing content
+                        $('.load-more-btn').remove();  // Remove any existing button
+
+                        // Loop through and display portfolio items
                         res.data.forEach(function(item) {
                             let imageUrl = "{{ asset('') }}/" + item.portfolio_image;
 
@@ -735,11 +741,18 @@
                             `;
                             portfolioContainer.append(portfolioItem); // Append to the container
                         });
+
+                        // If more than 2 items, show the button
+                        if (res.data.length >= 9) {
+                            $('.redirect_link').removeClass('d-none');
+                            $('.redirect_link').attr('href', "{{ route('portfolio') }}");
+                        }
+
                     } else {
                         portfolioContainer.empty(); // Clear existing content
                         portfolioContainer.append(`
                             <div class="alert alert-info" role="alert">
-                                 There is no data here
+                                There is no data here
                             </div>
                         `);
                     }
@@ -750,10 +763,10 @@
             });
         }
 
-        // Call fetchData with default ID or the ID of the first tab when the page loads
-        let defaultTab = document.querySelector('.menu_listing.active_portfolio');
-        let defaultId = defaultTab ? $(defaultTab).attr('data-id') : 'default-id'; // Replace 'default-id' with the actual default ID if needed
-        fetchData(defaultId);
+    // Call fetchData with default ID or the ID of the first tab when the page loads
+    let defaultTab = document.querySelector('.menu_listing.active_portfolio');
+    let defaultId = defaultTab ? $(defaultTab).attr('data-id') : 'default-id'; // Replace 'default-id' with the actual default ID if needed
+    fetchData(defaultId);
     });
 </script>
 
