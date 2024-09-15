@@ -3009,7 +3009,7 @@ footer {
     line-height: 30px;
 }
 .widget-2 .social_links {
-    margin-top: 16px;
+    /* margin-top: 16px; */
 }
 .widget-2 .social_links li {
     display: inline-block;

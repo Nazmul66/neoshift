@@ -22,7 +22,7 @@
                        <p>{{ $banner->description }}</p>
 
                        <div class="banner_action">
-                            <a href="{{ $banner->url }}">Learn More</a>
+                            <a href="{{ $banner->url }}">Explore Products</a>
 
                             <div class="banner_watch_video">
                                 <i class="bx bxs-right-arrow"></i>
@@ -333,8 +333,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="portfolio_title">
-                        <h5>Portfolio</h5>
-                        <h2>Work Portfolio</h2>
+                        {{-- <h5>Portfolio</h5> --}}
+                        <h2>Products We Serve</h2>
                     </div>
                 </div>
 
@@ -343,7 +343,7 @@
                         <ul>
                             @foreach ($portfolioCategories as $row => $item)
                                 <li class="menu_listing {{ $row == 0 ? 'active_portfolio' : '' }}" data-id={{ $item->id }}>
-                                    <i class='{{ $item->category_icon }}'></i> 
+                                    <i class='{{ $item->category_icon }}'></i>
                                     {{ $item->category_name }}
                                 </li>
                             @endforeach
@@ -564,7 +564,7 @@
                                 </div>
                             </div>
                         @endforeach
-                        
+
                     </div>
                 </div>
             </div>
@@ -696,7 +696,7 @@
         tabs.forEach(tab => {
             tab.addEventListener('click', function() {
                 tabs.forEach(tab => tab.classList.remove('active_portfolio'));
-                
+
                 this.classList.add('active_portfolio');
                 fetchData($(this).attr('data-id')); // Fetch data when tab is clicked
             });
@@ -714,7 +714,7 @@
                     console.log(res.data);
 
                     let portfolioContainer = $('.portfolio_container');
-                    
+
                     if (res.data.length > 0) {
                         portfolioContainer.empty(); // Clear existing content
 

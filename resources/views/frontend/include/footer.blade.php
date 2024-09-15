@@ -23,7 +23,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-sm-6 col-md-6">
+                <div class="col-lg-3 offset-lg-1 col-sm-6 col-md-6">
                     <div class="widget-2">
                         <h4>Quick Links</h4>
                         <ul>
@@ -55,7 +55,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-sm-6 col-md-6">
+                {{-- <div class="col-lg-2 col-sm-6 col-md-6">
                     <div class="widget-2">
                         <h4>Services</h4>
                         <ul>
@@ -85,19 +85,19 @@
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="col-lg-4">
                     <div class="widget-2">
-                        <h4>Our Newsletter </h4>
-                        <p>Subscribe to Our Newsletter and try our Software first</p>
+                        <h4>Social Links </h4>
+                        <p>Connect Us :</p>
 
-                        <div class="subscription_field">
+                        {{-- <div class="subscription_field">
                             <form action="">
                                 <input type="text" name="" class="subscription_form" placeholder="Enter Your Mail">
                                 <button class="subscribe_btn" type="submit">Subscribe</button>
                             </form>
-                        </div>
+                        </div> --}}
 
                         <ul class="social_links">
                             <li>

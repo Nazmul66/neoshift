@@ -11,7 +11,7 @@
 
 @section('body-content')
 
-    <!-- Breadcrumb section start -->
+    {{-- <!-- Breadcrumb section start -->
        <section class="breadcrumb_section">
             <div class="container">
                 <div class="row">
@@ -34,14 +34,14 @@
                 </div>
             </div>
        </section>
-    <!-- Breadcrumb section end -->
+    <!-- Breadcrumb section end --> --}}
 
 
     <!-- Schedule section start -->
     <section class="schedule_section">
         <div class="container">
             <div class="row align-items-center">
-                {{-- <div class="col-lg-5 order-2 order-sm-2 order-md-2 order-lg-1">
+                <div class="col-lg-5 order-2 order-sm-2 order-md-2 order-lg-1">
                   <div class="schedual_meeting_img">
                      <img src="{{ asset('public/frontend/assets/images/schedule_meeting.png') }}" alt="">
                   </div>
@@ -56,33 +56,21 @@
 
                         <form action="">
                             <div class="row">
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-12">
                                     <div class="form_data">
                                         <input type="text" name="name" class="form_control" id="name" placeholder="Full Name....">
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-12">
                                     <div class="form_data">
                                         <input type="text" name="phone" class="form_control" id="phone" placeholder="Mobile Phone....">
                                     </div>
                                 </div>
 
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form_data">
-                                        <input type="email" name="email" class="form_control" id="email" placeholder="Email Address....">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6">
-                                    <div class="form_data">
-                                        <input type="text" name="company_name" class="form_control" id="company_name" placeholder="Company Name....">
-                                    </div>
-                                </div>
-
                                 <div class="col-lg-12">
                                     <div class="form_data">
-                                        <input type="datetime-local" class="form_control" id="datetimepicker" name="date_time" placeholder="Select Date & Time....">
+                                        <input type="email" name="email" class="form_control" id="email" placeholder="Email Address....">
                                     </div>
                                 </div>
 
@@ -90,9 +78,9 @@
                             </div>
                         </form>
                     </div>
-                </div> --}}
+                </div>
 
-                {!! $settings->calendly_api !!}
+                {{-- {!! $settings->calendly_api !!} --}}
             </div>
         </div>
       </section>
