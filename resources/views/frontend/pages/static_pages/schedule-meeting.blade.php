@@ -1,3 +1,13 @@
+@php
+    use Stevebauman\Location\Facades\Location;
+
+    $userIp = request()->ip();
+    //  echo  $userIp;
+
+    $position = Location::get($userIp);
+    // print_r($position);
+@endphp
+
 @extends('frontend.layout.master')
 
 @push('meta-title')
@@ -54,7 +64,9 @@
                             <h2>Schedule Meeting</h2>
                         </div>
 
-                        <form action="">
+                        <form method="POST" action="{{ route('info_store') }}" >
+                            @csrf
+
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form_data">
@@ -73,6 +85,15 @@
                                         <input type="email" name="email" class="form_control" id="email" placeholder="Email Address....">
                                     </div>
                                 </div>
+
+                                @if ( !empty($position) )
+                                   {{-- <input type="text" name="ip" value="{{ $position->ip }}" hidden> --}}
+                                   <input type="text" name="country_name" value="{{ $position->countryName }}" hidden>
+                                   <input type="text" name="countryCode" value="{{ $position->countryCode }}" hidden>
+                                   <input type="text" name="regionName" value="{{ $position->regionName }}" hidden>
+                                   <input type="text" name="zipCode" value="{{ $position->zipCode }}" hidden>
+                                   <input type="text" name="timezone" value="{{ $position->timezone }}" hidden>
+                                @endif
 
                                 <button type="submit" class="contact_buttons">Submit</button>
                             </div>
