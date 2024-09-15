@@ -10,11 +10,12 @@ use App\Http\Controllers\Backend\BannerController;
 use App\Http\Controllers\Backend\CounterController;
 use App\Http\Controllers\Backend\PortfolioCategoryController;
 use App\Http\Controllers\Backend\PortfolioManageController;
+use App\Http\Controllers\Backend\InformationController;
 
 
 Route::group(["prefix" => "admin"], function(){
     Route::view('/dashboard', "backend.pages.dashboard")->name('dashboard');
-    
+
     //____ Portfolio Category ____//
     Route::resource('portfolio-category', PortfolioCategoryController::class)->names('admin.portfolio-category');
     Route::get('/portfolioCat-tabData/{id}',[PortfolioCategoryController::class,'tabData'])->name('admin.tabData-portfolio-category');
@@ -40,6 +41,11 @@ Route::group(["prefix" => "admin"], function(){
     Route::resource('blog', BlogController::class)->names('admin.blog');
     Route::get('/get-blog',[BlogController::class,'getData'])->name('admin.get-blog');
     Route::post('/blog/status',[BlogController::class,'adminBlogStatus'])->name('admin.blog.status');
+
+    //____ Contact Information ____//
+    Route::resource('contact-info', InformationController::class)->names('admin.contact.info');
+    Route::get('/get-contact-info',[InformationController::class,'getData'])->name('admin.get.contact.info');
+    Route::post('/contact-info/status',[InformationController::class,'adminContactInfoStatus'])->name('admin.contact.info.status');
 
     //____ Banner ____//
     Route::resource('banner', BannerController::class)->names('admin.banner');

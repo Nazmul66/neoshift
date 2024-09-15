@@ -121,6 +121,12 @@
               <div data-i18n="Notifications">About Section</div>
             </a>
           </li>
+
+          <li class="menu-item">
+            <a href="{{ route('admin.contact.info.index') }}" class="menu-link">
+              <div data-i18n="Notifications">Contact Information</div>
+            </a>
+          </li>
         </ul>
       </li>
 
